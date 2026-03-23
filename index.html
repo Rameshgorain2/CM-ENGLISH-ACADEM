@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,38 +121,71 @@
 
     <style>
         /* ========================================== */
-        /* MODERN GLASSMORPHISM THEME VARIABLES       */
+        /* DYNAMIC LIGHT & DARK MODE VARIABLES        */
         /* ========================================== */
         :root {
-            --primary-color: #6366f1; /* Indigo */
-            --secondary-color: #8b5cf6; /* Purple */
-            --accent-color: #06b6d4; /* Cyan */
+            /* LIGHT MODE (DEFAULT) */
+            --primary-color: #4f46e5; 
+            --secondary-color: #7c3aed; 
+            --accent-color: #0284c7; 
+            --text-main: #334155;
+            --text-heading: #0f172a;
+            --text-muted: #64748b;
+            --bg-color: #f8fafc;
+            
+            /* Glassmorphism Light */
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(0, 0, 0, 0.08);
+            --glass-border-light: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+            --glass-blur: blur(16px);
+            
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --footer-bg: rgba(241, 245, 249, 0.9);
+            --hero-gradient: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.95));
+            --contact-gradient: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(124, 58, 237, 0.05));
+            --body-gradient: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.05), transparent 25%);
+            
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            /* DARK MODE */
+            --primary-color: #6366f1; 
+            --secondary-color: #8b5cf6; 
+            --accent-color: #06b6d4; 
             --text-main: #f8fafc;
+            --text-heading: #ffffff;
             --text-muted: #cbd5e1;
-            --glass-bg: rgba(15, 23, 42, 0.4);
+            --bg-color: #020617;
+            
+            /* Glassmorphism Dark */
+            --glass-bg: rgba(15, 23, 42, 0.5);
             --glass-border: rgba(255, 255, 255, 0.1);
             --glass-border-light: rgba(255, 255, 255, 0.2);
             --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            --glass-blur: blur(16px);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            --nav-bg: rgba(2, 6, 23, 0.85);
+            --footer-bg: rgba(0, 0, 0, 0.5);
+            --hero-gradient: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6), rgba(2, 6, 23, 0.95));
+            --contact-gradient: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.4));
+            --body-gradient: radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%), radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
         }
 
         /* Global Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         
         body {
-            background-color: #020617; /* Slate 950 */
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%),
-                radial-gradient(circle at 50% 80%, rgba(6, 182, 212, 0.1), transparent 25%);
+            background-color: var(--bg-color);
+            background-image: var(--body-gradient);
             background-attachment: fixed;
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.7;
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Outfit', sans-serif; } 
+        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Outfit', sans-serif; color: var(--text-heading); } 
 
         /* Glassmorphism Utilities */
         .glass-panel {
@@ -164,11 +197,12 @@
             border-left: 1px solid var(--glass-border-light);
             box-shadow: var(--glass-shadow);
             border-radius: 20px;
+            transition: var(--transition);
         }
 
         /* Gradient Text Utility */
         .text-gradient {
-            background: linear-gradient(135deg, #818cf8, #c084fc, #22d3ee);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
@@ -176,10 +210,10 @@
 
         /* Loader */
         #loader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #020617;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color);
             z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.5s;
         }
-        .spinner { border: 4px solid rgba(255,255,255,0.05); border-top: 4px solid var(--primary-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; box-shadow: 0 0 20px rgba(99,102,241,0.5); }
+        .spinner { border: 4px solid var(--glass-border); border-top: 4px solid var(--primary-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; box-shadow: 0 0 20px rgba(99,102,241,0.3); }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
         /* Navbar */
@@ -189,18 +223,18 @@
         }
         nav.scrolled {
             padding: 12px 5%;
-            background: rgba(2, 6, 23, 0.7);
+            background: var(--nav-bg);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--glass-border);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
-        .logo { font-size: clamp(20px, 4vw, 26px); font-weight: 900; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; letter-spacing: -0.5px;}
-        .logo i { color: var(--accent-color); text-shadow: 0 0 15px rgba(6,182,212,0.6); }
+        .logo { font-size: clamp(20px, 4vw, 26px); font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 10px; letter-spacing: -0.5px;}
+        .logo i { color: var(--accent-color); text-shadow: 0 0 10px rgba(6,182,212,0.3); }
         
-        .nav-links { display: flex; gap: 35px; align-items: center;}
-        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 15px; transition: var(--transition); position: relative;}
-        .nav-links a:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .nav-links { display: flex; gap: 30px; align-items: center;}
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 15px; transition: var(--transition); position: relative;}
+        .nav-links a:hover { color: var(--text-heading); text-shadow: 0 0 8px rgba(255,255,255,0.2); }
         .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 50%; width: 0; height: 2px; background: var(--primary-color); transition: var(--transition); transform: translateX(-50%); }
         .nav-links a:hover::after { width: 100%; box-shadow: 0 0 10px var(--primary-color); }
         
@@ -213,19 +247,104 @@
         .btn-nav::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); z-index: -1; transition: opacity 0.3s ease; opacity: 0; }
         .btn-nav:hover::before { opacity: 1; }
         .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6); }
-        .btn-nav::after { display: none; } /* Hide underline effect */
+        .btn-nav::after { display: none; }
         
-        .menu-toggle { display: none; font-size: 26px; color: #fff; cursor: pointer; }
+        .theme-toggle-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-heading);
+            width: 42px; height: 42px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer; font-size: 18px; transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        .theme-toggle-btn:hover { background: var(--glass-border-light); transform: rotate(15deg); }
+
+        .menu-toggle { display: none; font-size: 26px; color: var(--text-heading); cursor: pointer; }
+
+        /* ========================================== */
+        /* PROMO BANNER SYSTEM (TOP PAGE)             */
+        /* ========================================== */
+        #promo-banner-wrapper {
+            display: none; /* Controlled by JS */
+            padding: 100px 5% 0px; 
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        .promo-banner {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            min-height: 150px;
+        }
+        .promo-banner img {
+            width: 100%;
+            max-height: 400px; /* Fits landscape any size */
+            object-fit: cover;
+            display: block;
+        }
+        /* Gradient overlay to ensure CTA text is visible */
+        .promo-banner::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 50%;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8));
+            pointer-events: none;
+        }
+        [data-theme="light"] .promo-banner::after {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9));
+        }
+        .promo-cta-wrapper {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        .btn-promo-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff !important;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: var(--transition);
+            white-space: nowrap;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-promo-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
 
         /* Sections */
-        section { padding: 120px 5% 60px; min-height: 100vh; position: relative; }
-        .section-title { text-align: center; font-size: clamp(36px, 5vw, 52px); color: #fff; margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
+        section { padding: 100px 5% 60px; min-height: 100vh; position: relative; }
+        .section-title { text-align: center; font-size: clamp(36px, 5vw, 52px); margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
 
         /* Hero Section */
         #home {
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; 
-            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1), transparent 60%);
-            padding-top: 180px; min-height: 100vh;
+            background-image: var(--hero-gradient), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            padding-top: 150px; min-height: 100vh;
         }
         
         .hero-glass-container {
@@ -236,30 +355,32 @@
 
         .anniversary-badge {
             display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff; padding: 10px 25px; border-radius: 40px; font-size: 14px; font-weight: 600; font-family: 'Outfit', sans-serif;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);
+            color: var(--text-heading); padding: 10px 25px; border-radius: 40px; font-size: 14px; font-weight: 700; font-family: 'Outfit', sans-serif;
             margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(10px);
         }
         .anniversary-badge i { color: #fbbf24; font-size: 16px; text-shadow: 0 0 10px rgba(251,191,36,0.6);}
 
         .hero-title { font-size: clamp(42px, 7vw, 80px); font-weight: 900; margin-bottom: 25px; line-height: 1.1; letter-spacing: -2px;}
-        .hero-subtitle { font-size: clamp(18px, 3vw, 22px); margin-bottom: 40px; font-weight: 400; max-width: 800px; color: var(--text-muted); margin-left: auto; margin-right: auto;}
+        .hero-subtitle { font-size: clamp(18px, 3vw, 22px); margin-bottom: 40px; font-weight: 500; max-width: 800px; color: var(--text-muted); margin-left: auto; margin-right: auto;}
         
         .highlight-box { 
             display: inline-block; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); 
-            color: #fbbf24; padding: 12px 35px; border-radius: 30px; font-size: 18px; font-weight: 700; 
+            color: #d97706; padding: 12px 35px; border-radius: 30px; font-size: 18px; font-weight: 800; 
             font-family: 'Outfit', sans-serif; margin-bottom: 45px; box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); 
         }
+        [data-theme="dark"] .highlight-box { color: #fbbf24; }
 
         .btn-primary {
             padding: 18px 45px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-            color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px;
+            color: #fff !important; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px;
             font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition);
             box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; gap: 12px;
             letter-spacing: 0.5px;
         }
-        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); color: #fff; }
 
         /* Trust Stats / Journey */
         .stats-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: -50px; position: relative; z-index: 10;}
@@ -267,17 +388,17 @@
             padding: 30px 40px; text-align: center; min-width: 220px; 
             transition: var(--transition);
         }
-        .stat-box:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.08); border-color: rgba(255,255,255,0.3);}
-        .stat-box h3 { font-size: 38px; color: #fff; font-weight: 900; text-shadow: 0 0 20px rgba(255,255,255,0.3);}
-        .stat-box p { color: var(--accent-color); font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px;}
+        .stat-box:hover { transform: translateY(-10px); background: var(--glass-border-light); border-color: var(--glass-border-light);}
+        .stat-box h3 { font-size: 38px; color: var(--text-heading); font-weight: 900; text-shadow: 0 0 10px rgba(0,0,0,0.05);}
+        .stat-box p { color: var(--accent-color); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px;}
 
         /* Content Sections Styling */
         .content-wrapper { max-width: 1100px; margin: 0 auto 50px; padding: 50px; }
-        .content-wrapper h2 { color: #fff; font-size: 32px; margin-bottom: 25px; font-weight: 800;}
+        .content-wrapper h2 { color: var(--text-heading); font-size: 32px; margin-bottom: 25px; font-weight: 800;}
         .content-wrapper h3 { color: var(--accent-color); font-size: 24px; margin-top: 40px; margin-bottom: 15px; font-weight: 700;}
         .content-wrapper p { font-size: 17px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.8; text-align: justify; }
         .content-wrapper ul { margin-left: 20px; margin-bottom: 25px; color: var(--text-muted); font-size: 17px; line-height: 1.9;}
-        .content-wrapper strong { color: #fff; font-weight: 600; }
+        .content-wrapper strong { color: var(--text-heading); font-weight: 700; }
 
         /* Classes Section */
         #classes { padding-top: 100px; }
@@ -285,47 +406,49 @@
         .card { padding: 45px 35px; transition: var(--transition); position: relative; overflow: hidden; }
         .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); opacity: 0; transition: var(--transition); }
         .card:hover::before { opacity: 1; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);}
-        .card h3 { color: #fff; font-size: 26px; font-weight: 800; margin-bottom: 15px; }
-        .card .badge { display: inline-block; padding: 8px 18px; border-radius: 30px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .badge.free { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
-        .badge.paid { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .card:hover { transform: translateY(-10px); box-shadow: var(--glass-shadow); background: var(--glass-border-light); border-color: var(--glass-border-light);}
+        .card h3 { font-size: 26px; font-weight: 800; margin-bottom: 15px; }
+        .card .badge { display: inline-block; padding: 8px 18px; border-radius: 30px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .badge.free { background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }
+        [data-theme="dark"] .badge.free { color: #4ade80; }
+        [data-theme="dark"] .badge.paid { color: #7dd3fc; }
         .card p { margin-top: 20px; color: var(--text-muted); font-size: 16px; line-height: 1.7; }
 
         /* Gallery */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;}
-        .gallery-item { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/3; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0.9;}
+        .gallery-item { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/3; background: var(--glass-bg); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0.95;}
         .gallery-item:hover img { transform: scale(1.1); opacity: 1; }
         .gallery-overlay {
-            position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(2, 6, 23, 0.95));
+            position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             padding: 40px 20px 20px; color: #fff; transform: translateY(100%); transition: var(--transition);
         }
         .gallery-item:hover .gallery-overlay { transform: translateY(0); }
-        .empty-msg { text-align: center; color: var(--text-muted); font-size: 18px; font-weight: 500; width: 100%; grid-column: 1 / -1; padding: 80px 0; border-radius: 20px; border: 1px dashed var(--glass-border-light);}
+        .empty-msg { text-align: center; color: var(--text-muted); font-size: 18px; font-weight: 600; width: 100%; grid-column: 1 / -1; padding: 80px 0; border-radius: 20px; border: 1px dashed var(--glass-border-light);}
         
         .category-filters { text-align: center; margin-bottom: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: var(--text-muted); font-weight: 500; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); backdrop-filter: blur(5px);}
-        .filter-btn.active, .filter-btn:hover { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.4); box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+        .filter-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-muted); font-weight: 600; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); backdrop-filter: var(--glass-blur);}
+        .filter-btn.active, .filter-btn:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3); }
 
         /* Blog Section */
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;}
         .blog-card { padding: 40px; transition: var(--transition); }
-        .blog-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
-        .blog-date { font-size: 13px; color: var(--accent-color); font-weight: 700; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px;}
-        .blog-card h3 { font-size: 22px; color: #fff; margin-bottom: 15px; line-height: 1.4; font-weight: 700;}
+        .blog-card:hover { transform: translateY(-5px); background: var(--glass-border-light); border-color: var(--glass-border-light); }
+        .blog-date { font-size: 13px; color: var(--accent-color); font-weight: 800; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px;}
+        .blog-card h3 { font-size: 22px; margin-bottom: 15px; line-height: 1.4; font-weight: 800;}
         .blog-card p { color: var(--text-muted); font-size: 16px; margin-bottom: 25px; line-height: 1.7;}
-        .blog-card a { color: var(--primary-color); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition);}
-        .blog-card a:hover { color: #fff; gap: 12px;}
+        .blog-card a { color: var(--primary-color); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition);}
+        .blog-card a:hover { color: var(--secondary-color); gap: 12px;}
 
         /* FAQ Section (Glassy Accordion) */
         .faq-container { max-width: 900px; margin: 50px auto 0; }
         .faq-item { margin-bottom: 20px; transition: var(--transition); cursor: pointer; padding: 30px;}
-        .faq-item:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
-        .faq-question { font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item:hover { background: var(--glass-border-light); border-color: var(--glass-border-light); }
+        .faq-question { font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: var(--text-heading); display: flex; justify-content: space-between; align-items: center; }
         .faq-answer { font-size: 16px; color: var(--text-muted); margin-top: 20px; display: none; line-height: 1.8; }
         .faq-question i { color: var(--accent-color); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); background: rgba(6,182,212,0.1); padding: 8px; border-radius: 50%;}
-        .faq-item.active { border-color: rgba(99,102,241,0.5); box-shadow: 0 0 20px rgba(99,102,241,0.1); background: rgba(255,255,255,0.05);}
+        .faq-item.active { border-color: var(--primary-color); box-shadow: 0 0 20px rgba(79, 70, 229, 0.1); background: var(--glass-bg);}
         .faq-item.active .faq-answer { display: block; animation: slideDown 0.4s ease; }
         .faq-item.active .faq-question i { transform: rotate(180deg); background: var(--primary-color); color: #fff; box-shadow: 0 0 15px var(--primary-color);}
 
@@ -333,28 +456,29 @@
         .contact-card {
             max-width: 900px; margin: 0 auto; padding: 80px 50px;
             text-align: center; position: relative; overflow: hidden;
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.4));
-            border: 1px solid rgba(255,255,255,0.15);
+            background: var(--contact-gradient);
+            border: 1px solid var(--glass-border);
         }
         .contact-card::before {
             content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 50%); z-index: -1; animation: spin 20s linear infinite;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 50%); z-index: -1; animation: spin 20s linear infinite;
         }
-        .contact-icon { width: 100px; height: 100px; background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); font-size: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; box-shadow: 0 0 30px rgba(34, 197, 94, 0.2); }
-        .contact-card h2 { color: #fff; font-size: 40px; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px;}
-        .phone-number { font-size: 48px; font-weight: 900; color: #fff; margin: 30px 0 40px; font-family: 'Outfit', sans-serif; display: block; text-decoration: none; letter-spacing: -1px; text-shadow: 0 0 20px rgba(255,255,255,0.3);}
+        .contact-icon { width: 100px; height: 100px; background: rgba(34, 197, 94, 0.1); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); font-size: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; box-shadow: 0 0 30px rgba(34, 197, 94, 0.1); }
+        [data-theme="dark"] .contact-icon { color: #4ade80; }
+        .contact-card h2 { font-size: 40px; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;}
+        .phone-number { font-size: 48px; font-weight: 900; color: var(--text-heading); margin: 30px 0 40px; font-family: 'Outfit', sans-serif; display: block; text-decoration: none; letter-spacing: -1px; text-shadow: 0 0 20px rgba(0,0,0,0.05);}
         
         .contact-buttons { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; flex-wrap: wrap; }
-        .btn-call { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 18px 45px; border-radius: 40px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: var(--transition); backdrop-filter: blur(10px);}
-        .btn-whatsapp { background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4); color: white; padding: 18px 45px; border-radius: 40px; font-weight: 600; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.2);}
-        .btn-call:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,255,255,0.1); }
-        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(22, 163, 74, 0.6); }
+        .btn-call { background: var(--glass-bg); border: 1px solid var(--glass-border-light); color: var(--text-heading); padding: 18px 45px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: var(--transition); backdrop-filter: var(--glass-blur);}
+        .btn-whatsapp { background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 10px 30px rgba(22, 163, 74, 0.3); color: white !important; padding: 18px 45px; border-radius: 40px; font-weight: 700; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.2);}
+        .btn-call:hover { background: var(--glass-border-light); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(22, 163, 74, 0.5); }
 
         /* Floating WhatsApp Button */
         .float-wa {
             position: fixed; bottom: 40px; right: 40px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white;
             width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-            font-size: 35px; box-shadow: 0 10px 30px rgba(22, 163, 74, 0.5); z-index: 999; transition: var(--transition);
+            font-size: 35px; box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4); z-index: 999; transition: var(--transition);
             text-decoration: none; border: 1px solid rgba(255,255,255,0.3);
         }
         .float-wa::before {
@@ -362,16 +486,16 @@
             border: 2px solid #22c55e; animation: pulse 2s infinite; z-index: -1;
         }
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
-        .float-wa:hover { transform: scale(1.1) rotate(-10deg); }
+        .float-wa:hover { transform: scale(1.1) rotate(-10deg); color: white; }
 
         /* Footer */
-        footer { padding: 100px 5% 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3); backdrop-filter: blur(10px);}
+        footer { padding: 100px 5% 40px; text-align: center; border-top: 1px solid var(--glass-border); background: var(--footer-bg); backdrop-filter: blur(10px);}
         .seo-footer-text { max-width: 1000px; margin: 0 auto 40px; font-size: 15px; line-height: 1.9; text-align: justify; color: var(--text-muted); }
-        .seo-footer-text strong { color: #fff; font-weight: 700;}
-        .seo-footer-text a { color: var(--accent-color); text-decoration: none; transition: var(--transition);}
-        .seo-footer-text a:hover { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.5);}
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.6);}
-        .footer-bottom span { color: var(--accent-color); font-weight: 700; }
+        .seo-footer-text strong { color: var(--text-heading); font-weight: 800;}
+        .seo-footer-text a { color: var(--accent-color); text-decoration: none; transition: var(--transition); font-weight: 600;}
+        .seo-footer-text a:hover { color: var(--primary-color); text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);}
+        .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 30px; font-size: 14px; font-weight: 600; color: var(--text-muted);}
+        .footer-bottom span { color: var(--accent-color); font-weight: 800; }
 
         /* Animations */
         @keyframes slideDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
@@ -385,19 +509,20 @@
         #admin-wrapper { display: none; min-height: 100vh; position: relative; }
         .admin-login { height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px;}
         .login-box { padding: 60px 50px; text-align: center; width: 100%; max-width: 480px; }
-        .login-box input { width: 100%; padding: 18px; margin: 30px 0; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; font-size: 16px; background: rgba(0,0,0,0.3); color: #fff; outline: none; transition: var(--transition);}
-        .login-box input:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.3); background: rgba(0,0,0,0.5);}
+        .login-box input { width: 100%; padding: 18px; margin: 30px 0; border: 1px solid var(--glass-border); border-radius: 12px; font-size: 16px; background: var(--bg-color); color: var(--text-main); outline: none; transition: var(--transition);}
+        .login-box input:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.2);}
         #admin-dashboard { display: none; padding: 60px 5%; max-width: 800px; margin: 0 auto;}
-        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; padding-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; gap: 20px;}
-        .admin-card { padding: 50px; }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; padding-bottom: 25px; border-bottom: 1px solid var(--glass-border); flex-wrap: wrap; gap: 20px;}
+        .admin-card { padding: 50px; margin-bottom: 30px;}
         .form-group { margin-bottom: 30px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-muted); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;}
-        .form-group select, .form-group input[type="file"] { width: 100%; padding: 16px; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; font-size: 16px; background: rgba(0,0,0,0.3); color: #fff; cursor: pointer;}
-        .form-group select option { background: #0f172a; color: #fff; }
-        #image-preview { width: 100%; max-height: 300px; object-fit: contain; margin-top: 25px; display: none; border-radius: 12px; border: 1px dashed rgba(255,255,255,0.3); padding: 10px; background: rgba(0,0,0,0.2);}
+        .form-group label { display: block; margin-bottom: 12px; font-weight: 700; color: var(--text-muted); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;}
+        .form-group select, .form-group input[type="file"], .form-group input[type="text"], .form-group input[type="url"] { width: 100%; padding: 16px; border: 1px solid var(--glass-border); border-radius: 12px; font-size: 16px; background: var(--bg-color); color: var(--text-main); cursor: pointer; transition: var(--transition);}
+        .form-group input:focus { border-color: var(--primary-color); box-shadow: 0 0 10px rgba(79, 70, 229, 0.2); outline: none;}
+        .form-group select option { background: var(--bg-color); color: var(--text-main); }
+        #image-preview { width: 100%; max-height: 300px; object-fit: contain; margin-top: 25px; display: none; border-radius: 12px; border: 1px dashed var(--glass-border-light); padding: 10px; background: rgba(0,0,0,0.05);}
         
-        .btn-danger { background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #fca5a5; padding: 12px 25px; border-radius: 30px; font-weight: 600; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;}
-        .btn-danger:hover { background: #ef4444; color: #fff; box-shadow: 0 0 20px rgba(239,68,68,0.4); }
+        .btn-danger { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; padding: 15px 30px; border-radius: 30px; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;}
+        .btn-danger:hover { background: #ef4444; color: #fff; box-shadow: 0 0 20px rgba(239,68,68,0.3); }
 
         @media (max-width: 992px) {
             .stats-container { margin-top: 40px; }
@@ -408,12 +533,15 @@
             .menu-toggle { display: block; }
             .nav-links {
                 position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
-                background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+                background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
                 flex-direction: column; justify-content: center; align-items: center;
                 transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1); gap: 40px; z-index: -1;
             }
             .nav-links.active { right: 0; }
             .nav-links a { font-size: 22px; width: 100%; text-align: center; }
+            
+            .promo-cta-wrapper { right: 50%; top: auto; bottom: 20px; transform: translateX(50%); }
+            #promo-banner-wrapper { padding-top: 85px; }
             
             .hero-title { font-size: clamp(36px, 10vw, 50px); }
             .content-wrapper { padding: 30px 20px; }
@@ -438,8 +566,8 @@
     <!-- Premium Loader -->
     <div id="loader">
         <div class="spinner"></div>
-        <h2 style="margin-top: 30px; color: #fff; font-weight: 800; letter-spacing: 1px;">CM ENGLISH</h2>
-        <p style="color: var(--accent-color); font-weight: 600; margin-top: 8px; text-transform: uppercase; font-size: 13px; letter-spacing: 3px;">Academy</p>
+        <h2 style="margin-top: 30px; font-weight: 900; letter-spacing: 1px;">CM ENGLISH ACADEMY</h2>
+        <p style="color: var(--accent-color); font-weight: 700; margin-top: 8px; text-transform: uppercase; font-size: 13px; letter-spacing: 3px;">Academy</p>
     </div>
 
     <!-- MAIN WEBSITE -->
@@ -448,22 +576,36 @@
         <!-- Navbar (Glassmorphism) -->
         <header>
             <nav id="navbar">
-                <a href="#home" class="logo" aria-label="Home"><i class="fa-solid fa-graduation-cap"></i> CM ENGLISH Academy</a>
-                <div class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu"><i class="fa-solid fa-bars-staggered"></i></div>
+                <a href="#home" class="logo" aria-label="Home"><i class="fa-solid fa-graduation-cap"></i> CM ENGLISH</a>
                 <div class="nav-links" id="nav-links">
                     <a href="#home" onclick="closeMenu()">Home</a>
                     <a href="#about-seo" onclick="closeMenu()">Our Story</a>
                     <a href="#classes" onclick="closeMenu()">Courses</a>
-                    <a href="#spoken-english" onclick="closeMenu()">Spoken English</a>
                     <a href="#gallery" onclick="closeMenu()">Gallery</a>
                     <a href="#faq" onclick="closeMenu()">FAQ</a>
                     <a href="#contact" class="btn-nav" onclick="closeMenu()">Join Now</a>
                 </div>
+                <div style="display: flex; gap: 15px; align-items: center;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu"><i class="fa-solid fa-bars-staggered"></i></div>
+                </div>
             </nav>
         </header>
 
+        <!-- Dynamic Promo Banner System -->
+        <section id="promo-banner-wrapper">
+            <div class="promo-banner reveal">
+                <img id="promo-img" src="" alt="Promotion Banner">
+                <div class="promo-cta-wrapper">
+                    <a id="promo-link" href="#" target="_blank" class="btn-promo-cta">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
         <!-- Hero Section -->
-        <section id="home">
+        <section id="home" style="padding-top: 130px;">
             <div class="hero-glass-container glass-panel">
                 <div class="anniversary-badge">
                     <i class="fa-solid fa-award"></i> 10 Years of Excellence (2016 - 2026)
@@ -506,20 +648,10 @@
                 <ul>
                     <li><strong>Free Foundation Classes:</strong> We believe every child deserves a fair, strong start. Thus, we offer complete, 100% free tuition for all Class 6 and Class 7 students.</li>
                     <li><strong>Intensive Board Preparation:</strong> We run specialized, intensive batches for Class 10 and Class 12. Our focus is on comprehensive grammar perfection, deep literature analysis, and rigorous mock test series.</li>
+                    <li><strong>Spoken English Integration:</strong> Interactive sessions dedicated to improving pronunciation, vocabulary, and public speaking confidence, making us the top choice for Spoken English Classes Nilmohanpur.</li>
                     <li><strong>Personalized Attention:</strong> We maintain intentionally small batch sizes. This allows our expert educators to provide dedicated, one-on-one focus on each student's unique weaknesses and strengths.</li>
-                    <li><strong>Comprehensive Study Material:</strong> Up-to-date, expertly crafted notes that align perfectly with the latest board syllabus.</li>
                 </ul>
                 <p>Whether your ultimate goal is to secure a perfect 100 in your demanding English Board Exams or simply to build an unshakable foundation in basic grammar, CM English Academy remains the ultimate, unrivaled destination in the entire Purulia district.</p>
-            </div>
-        </section>
-
-        <!-- Spoken English Dedicated Section -->
-        <section id="spoken-english" style="padding-top: 60px;">
-            <div class="content-wrapper glass-panel reveal" style="border-color: rgba(6, 182, 212, 0.3); box-shadow: 0 0 40px rgba(6, 182, 212, 0.1);">
-                <h2>Master Fluency with Spoken English Classes Nilmohanpur</h2>
-                <p>Reading and writing English is only half the journey. In today's highly competitive, modernized world, the ability to articulate your thoughts verbally is what truly sets you apart. This is exactly why our dedicated <strong>Spoken English Classes Nilmohanpur</strong> have become highly sought-after among students and professionals alike.</p>
-                <p>Our spoken English modules are seamlessly integrated into our curriculum. We focus on eradicating stage fright, improving pronunciation (phonetics), and enriching daily vocabulary. Through interactive group discussions, engaging debates, and practical mock interviews, we ensure that hesitation becomes a thing of the past.</p>
-                <p>Choosing CM English Academy means choosing holistic development. You don't just learn English; you live it, speak it, and command it with absolute confidence.</p>
             </div>
         </section>
 
@@ -583,33 +715,6 @@
             </div>
         </section>
 
-        <!-- Blog / SEO Articles Section -->
-        <section id="blog">
-            <h2 class="section-title reveal">Learning <span class="text-gradient">Resources</span></h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 18px;" class="reveal">Gain exclusive insights and highly effective educational tips from the leading English educators in Barabazar.</p>
-            
-            <div class="blog-grid reveal">
-                <article class="blog-card glass-panel">
-                    <span class="blog-date">March 2026</span>
-                    <h3>How to Score 90+ in English Board Exams</h3>
-                    <p>Scoring top marks in your Class 10 and 12 English board exams requires strategic planning, not just memorization. Learn our proven methodology for perfect literary analysis.</p>
-                    <a href="#contact">Join our Masterclass <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-                <article class="blog-card glass-panel">
-                    <span class="blog-date">February 2026</span>
-                    <h3>Benefits of Spoken English Classes Nilmohanpur</h3>
-                    <p>Why is spoken English paramount today? Discover how our specialized spoken English batches help students build unshakable confidence for future professional interviews.</p>
-                    <a href="#contact">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-                <article class="blog-card glass-panel">
-                    <span class="blog-date">January 2026</span>
-                    <h3>Why Choose the Best English Coaching in Barabazar?</h3>
-                    <p>Finding an "English Tuition Near Me" is easy via a quick search, but finding the absolute right mentor is hard. Here is a breakdown of why our 10-year legacy stands unmatched.</p>
-                    <a href="#contact">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-            </div>
-        </section>
-
         <!-- Expanded FAQ Section for SEO Rich Snippets -->
         <section id="faq">
             <h2 class="section-title reveal">Frequently Asked <span class="text-gradient">Questions</span></h2>
@@ -631,10 +736,6 @@
                 <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
                     <div class="faq-question">How can I find the best English tuition near me? <i class="fa-solid fa-chevron-down"></i></div>
                     <div class="faq-answer">If you are residing in the Purulia district, specifically around the Barabazar or Nilmohanpur areas, searching for an 'English tuition near me' will lead you directly to CM English Academy. You can physically visit our campus or simply call us at +91 90645 13055.</div>
-                </div>
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Do you offer English Medium board exam preparation? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">Yes, we highly specialize in English Medium board preparation exclusively for Class 10 and 12. Our course covers deep literature analysis, advanced grammar structures, and intensive mock tests to ensure 100% board success.</div>
                 </div>
                 <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
                     <div class="faq-question">What is the background and history of CM English Academy? <i class="fa-solid fa-chevron-down"></i></div>
@@ -670,7 +771,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 CM English Academy Nilmohanpur. <span>Celebrating 10 Years (2016-2026)</span>. All Rights Reserved.</p>
                 <p style="font-size: 13px; margin-top: 20px;">
-                    <a href="#admin" style="color: var(--text-muted); padding: 8px 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;" aria-label="Admin Login">Secure Admin Access <i class="fa-solid fa-lock" style="font-size: 10px; margin-left: 5px;"></i></a>
+                    <a href="#admin" style="color: var(--text-muted); padding: 8px 15px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; text-decoration: none;" aria-label="Admin Login">Secure Admin Access <i class="fa-solid fa-lock" style="font-size: 10px; margin-left: 5px;"></i></a>
                 </p>
             </div>
         </footer>
@@ -682,23 +783,49 @@
     <div id="admin-wrapper">
         <div class="admin-login" id="admin-login-sec">
             <div class="login-box glass-panel">
-                <h2 style="color: #fff; margin-bottom: 10px; font-weight: 800; font-size: 32px;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</h2>
-                <p style="color: var(--accent-color); font-size: 15px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">CM ENGLISH Academy</p>
+                <h2 style="margin-bottom: 10px; font-weight: 800; font-size: 32px;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</h2>
+                <p style="color: var(--accent-color); font-size: 15px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800;">CM ENGLISH Academy</p>
                 <input type="password" id="admin-password" placeholder="Enter Secure Password" aria-label="Admin Password">
                 <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;" onclick="checkPassword()"><i class="fa-solid fa-fingerprint"></i> Authenticate System</button>
-                <p id="login-error" style="color: #ef4444; display: none; margin-top: 20px; font-size: 15px; font-weight: 600; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-circle-exclamation"></i> Incorrect Password!</p>
-                <button style="background: transparent; color: var(--text-muted); border: none; margin-top: 35px; width: 100%; font-size: 15px; cursor: pointer; font-weight: 500; transition: var(--transition);" onclick="window.location.hash=''" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-muted)'">← Return to Website</button>
+                <p id="login-error" style="color: #ef4444; display: none; margin-top: 20px; font-size: 15px; font-weight: 700; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-circle-exclamation"></i> Incorrect Password!</p>
+                <button style="background: transparent; color: var(--text-muted); border: none; margin-top: 35px; width: 100%; font-size: 15px; cursor: pointer; font-weight: 600; transition: var(--transition);" onclick="window.location.hash=''" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'">← Return to Website</button>
             </div>
         </div>
 
         <div id="admin-dashboard">
             <div class="admin-header glass-panel" style="padding: 30px 40px; margin-bottom: 40px;">
-                <h2 style="color: #fff; font-weight: 800; font-size: 28px;"><i class="fa-solid fa-server" style="color: var(--accent-color);"></i> Control Panel</h2>
+                <h2 style="font-weight: 800; font-size: 28px;"><i class="fa-solid fa-server" style="color: var(--accent-color);"></i> Control Panel</h2>
                 <button class="btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-power-off"></i> Terminate Session</button>
             </div>
 
+            <!-- New Promo Banner Admin Card -->
             <div class="admin-card glass-panel">
-                <h3 style="margin-bottom: 35px; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; font-weight: 700; font-size: 24px;"><i class="fa-solid fa-cloud-arrow-up" style="color: var(--primary-color); margin-right: 10px;"></i> Upload Media Server</h3>
+                <h3 style="margin-bottom: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; font-weight: 800; font-size: 24px;"><i class="fa-solid fa-bullhorn" style="color: var(--accent-color); margin-right: 10px;"></i> Manage Top Promo Banner</h3>
+                
+                <div class="form-group">
+                    <label>Upload Banner Image (Landscape Mode)</label>
+                    <input type="file" id="banner-file" accept="image/*" onchange="previewPromoBanner(event)">
+                    <img id="banner-preview" src="" alt="Banner Preview">
+                </div>
+                <div class="form-group">
+                    <label>Call To Action (CTA) Button Text</label>
+                    <input type="text" id="banner-text" placeholder="e.g., Register Now For 2026">
+                </div>
+                <div class="form-group">
+                    <label>Call To Action Target Link (URL)</label>
+                    <input type="url" id="banner-link" placeholder="e.g., https://wa.me/919064513055">
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button class="btn-primary" id="upload-banner-btn" style="flex: 1; justify-content: center; min-width: 250px;" onclick="uploadPromoBanner()"><i class="fa-solid fa-upload"></i> Set Active Banner</button>
+                    <button class="btn-danger" style="flex: 1; justify-content: center; min-width: 250px;" onclick="deletePromoBanner()"><i class="fa-solid fa-trash"></i> Remove Banner</button>
+                </div>
+                <p id="banner-status" style="text-align: center; margin-top: 25px; font-weight: 700; font-size: 16px; padding: 10px; border-radius: 8px;"></p>
+            </div>
+
+            <!-- Existing Gallery Admin Card -->
+            <div class="admin-card glass-panel">
+                <h3 style="margin-bottom: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; font-weight: 800; font-size: 24px;"><i class="fa-solid fa-cloud-arrow-up" style="color: var(--primary-color); margin-right: 10px;"></i> Upload Gallery Media</h3>
                 
                 <div class="form-group">
                     <label for="upload-category">Select Destination Category</label>
@@ -716,7 +843,7 @@
                 </div>
 
                 <button class="btn-primary" id="upload-btn" style="width: 100%; justify-content: center; padding: 18px; font-size: 18px;" onclick="uploadData()"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload to Cloud Server</button>
-                <p id="upload-status" style="text-align: center; margin-top: 25px; font-weight: 600; font-size: 16px; padding: 10px; border-radius: 8px;"></p>
+                <p id="upload-status" style="text-align: center; margin-top: 25px; font-weight: 700; font-size: 16px; padding: 10px; border-radius: 8px;"></p>
             </div>
         </div>
     </div>
@@ -725,6 +852,31 @@
     <!-- JAVASCRIPT LOGIC & FIREBASE INTEGRATION    -->
     <!-- ========================================== -->
     <script>
+        // --- THEME TOGGLE LOGIC (LIGHT/DARK) ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        
+        // Default to light, check local storage
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if(theme === 'dark') {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
         // --- NAVBAR SCROLL EFFECT ---
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
@@ -769,6 +921,7 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
         const galleryRef = db.ref('uploads');
+        const promoBannerRef = db.ref('promo_banner/active'); // New Reference for Banner
 
         // IMGBB API
         const imgbbAPIKey = "b7b1309895b4830daaf39c194fa78efd";
@@ -815,6 +968,120 @@
             window.location.reload();
         }
 
+        // --- PROMO BANNER SYSTEM LOGIC ---
+        
+        // Fetch Banner for Website
+        promoBannerRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            const container = document.getElementById('promo-banner-wrapper');
+            if(data && data.url) {
+                document.getElementById('promo-img').src = data.url;
+                document.getElementById('promo-link').innerText = data.text || 'Explore Now';
+                document.getElementById('promo-link').innerHTML += ' <i class="fa-solid fa-arrow-right"></i>';
+                document.getElementById('promo-link').href = data.link || '#';
+                container.style.display = 'block';
+                
+                // Pre-fill Admin Panel if open
+                if(document.getElementById('banner-preview')) {
+                    document.getElementById('banner-preview').src = data.url;
+                    document.getElementById('banner-preview').style.display = 'block';
+                    document.getElementById('banner-text').value = data.text || '';
+                    document.getElementById('banner-link').value = data.link || '';
+                }
+            } else {
+                container.style.display = 'none';
+                if(document.getElementById('banner-preview')) {
+                    document.getElementById('banner-preview').style.display = 'none';
+                    document.getElementById('banner-text').value = '';
+                    document.getElementById('banner-link').value = '';
+                }
+            }
+        });
+
+        // Admin: Preview Banner
+        function previewPromoBanner(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('banner-preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            if(event.target.files[0]) {
+                reader.readAsDataURL(event.target.files[0]);
+            }
+        }
+
+        // Admin: Upload/Update Banner
+        async function uploadPromoBanner() {
+            const fileInput = document.getElementById('banner-file');
+            const textInput = document.getElementById('banner-text').value;
+            const linkInput = document.getElementById('banner-link').value;
+            const statusText = document.getElementById('banner-status');
+            const uploadBtn = document.getElementById('upload-banner-btn');
+
+            if(fileInput.files.length === 0 && document.getElementById('banner-preview').src === "") {
+                alert("Please select a banner image first!");
+                return;
+            }
+
+            try {
+                uploadBtn.disabled = true;
+                uploadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+                statusText.innerText = "";
+                statusText.style.background = "transparent";
+                
+                let imageUrl = document.getElementById('banner-preview').src;
+
+                if(fileInput.files.length > 0) {
+                    const formData = new FormData();
+                    formData.append("image", fileInput.files[0]);
+                    
+                    const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const imgbbData = await imgbbResponse.json();
+                    if(imgbbData.success) {
+                        imageUrl = imgbbData.data.url;
+                    } else {
+                        throw new Error("ImgBB Upload Failed");
+                    }
+                }
+
+                await promoBannerRef.set({
+                    url: imageUrl,
+                    text: textInput,
+                    link: linkInput,
+                    updatedAt: Date.now()
+                });
+
+                statusText.innerHTML = "<i class='fa-solid fa-circle-check'></i> Banner Updated Successfully!";
+                statusText.style.color = "#4ade80";
+                statusText.style.background = "rgba(74, 222, 128, 0.1)";
+                fileInput.value = "";
+            } catch (error) {
+                console.error(error);
+                statusText.innerHTML = "<i class='fa-solid fa-circle-xmark'></i> Update Failed.";
+                statusText.style.color = "#f87171";
+                statusText.style.background = "rgba(248, 113, 113, 0.1)";
+            } finally {
+                uploadBtn.disabled = false;
+                uploadBtn.innerHTML = '<i class="fa-solid fa-upload"></i> Set Active Banner';
+            }
+        }
+
+        // Admin: Delete Banner
+        async function deletePromoBanner() {
+            if(confirm("Are you sure you want to remove the promotional banner from the website?")) {
+                await promoBannerRef.remove();
+                document.getElementById('banner-status').innerHTML = "<i class='fa-solid fa-trash'></i> Banner Removed.";
+                document.getElementById('banner-status').style.color = "#ef4444";
+                document.getElementById('banner-status').style.background = "rgba(239, 68, 68, 0.1)";
+                document.getElementById('banner-file').value = "";
+            }
+        }
+
+        // --- EXISTING GALLERY LOGIC ---
         function previewImage(event) {
             const reader = new FileReader();
             reader.onload = function(){
@@ -904,7 +1171,6 @@
             let hasImages = false;
 
             allImages.forEach(img => {
-                // Highly Optimized SEO Alt Tag
                 let altText = `CM English Academy ${img.category} - Best English Coaching in Barabazar, Nilmohanpur`;
                 
                 const imgHtml = `
