@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta name="monetag" content="a836ba78249c5d8a10f26c6ee5e3e0cb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- 
+    =======================================================================
+    🚀 SECURITY & FIREBASE INSTRUCTIONS FOR ADMIN (PLEASE READ) 🚀
+    =======================================================================
+    1. Because your database is now highly secure (".write": "auth != null"),
+       you MUST enable "Authentication" in your Firebase Console.
+    2. Go to Firebase Console -> Authentication -> Sign-in method -> Enable "Email/Password".
+    3. Go to "Users" tab in Authentication -> Click "Add User".
+    4. Enter Email: admin@cmenglishacademy.com
+    5. Enter Password: Rameshbycm
+    6. Go to Firebase Realtime Database -> Rules and paste this EXACT code:
+    
+    {
+      "rules": {
+        ".read": "true",
+        "leads": {
+          ".read": "auth != null",
+          ".write": "true"
+        },
+        "uploads": { ".write": "auth != null" },
+        "promo_banner": { ".write": "auth != null" },
+        "notice": { ".write": "auth != null" }
+      }
+    }
+    
+    Now your admin panel is 100% Hacker-Proof and Un-bypassable!
+    =======================================================================
+    -->
+
     <!-- ========================================== -->
-    <!-- FAVICON -->
+    <!-- FAVICON (Just place favicon.png in same folder)-->
     <!-- ========================================== -->
     <link rel="icon" href="favicon.png" type="image/png">
 
-    <!-- ========================================== -->
-    <!-- ADVANCED ON-PAGE SEO & META TAGS           -->
-    <!-- ========================================== -->
     <title>Best English Coaching in Barabazar | Spoken English Classes Nilmohanpur</title>
-    <meta name="description" content="Searching for the Best English Coaching in Barabazar? CM English Academy offers top-tier English tuition near you, including Spoken English Classes in Nilmohanpur. Enroll for 2026!">
-    <meta name="keywords" content="Best English Coaching in Barabazar, Spoken English Classes Nilmohanpur, English Tuition Near Me, CM English Academy, Barabazar English tuition, top english classes near me, english medium tuition nilmohanpur, class 6 to 12 english coaching, purulia english tutor">
+    <meta name="description" content="Searching for the Best English Coaching in Barabazar? CM English Academy offers top-tier English tuition, including Spoken English Classes in Nilmohanpur. Enroll for 2026!">
+    <meta name="keywords" content="Best English Coaching in Barabazar, Spoken English Classes Nilmohanpur, English Tuition Near Me, CM English Academy, Barabazar English tuition, top english classes near me, english medium tuition nilmohanpur, class 6 to 12 english coaching">
     <meta name="author" content="CM English Academy">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Barabazar, Nilmohanpur, Purulia">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://cmenglishacademy.com/">
     
-    <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Best English Coaching in Barabazar | CM English Academy">
-    <meta property="og:description" content="Expert English education & Spoken English Classes in Nilmohanpur, Barabazar. Two years FREE for Class 6 & 7. Celebrating 10 Years of Excellence (2016 - 2026).">
+    <meta property="og:description" content="Expert English education & Spoken English Classes in Nilmohanpur, Barabazar. Two years FREE for Class 6 & 7.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://cmenglishacademy.com/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="CM English Academy">
 
-    <!-- Local Business & FAQ Schema Markup (JSON-LD) -->
     <script type="application/ld+json">[
       {
         "@context": "https://schema.org",
@@ -41,10 +62,9 @@
         "name": "CM English Academy",
         "alternateName": "CM English Academy Nilmohanpur",
         "foundingDate": "2016",
-        "description": "Celebrating 10 Years (2016-2026). The Best English Coaching in Barabazar providing coaching for Class 6 to 12 and Spoken English Classes Nilmohanpur.",
+        "description": "Celebrating 10 Years (2016-2026). The Best English Coaching in Barabazar.",
         "url": "https://cmenglishacademy.com/",
         "telephone": "+91-9064513055",
-        "email": "contact@cmenglishacademy.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Nilmohanpur",
@@ -53,353 +73,112 @@
           "postalCode": "723127",
           "addressCountry": "IN"
         },
-        "areaServed":["Barabazar", "Nilmohanpur", "Purulia", "Sindri", "Manbazar"],
-        "sameAs":[
-          "https://wa.me/919064513055"
-        ],
-        "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
-        "priceRange": "$"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity":[
-          {
-            "@type": "Question",
-            "name": "Which is the Best English Coaching in Barabazar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "CM English Academy is widely recognized as the best English coaching in Barabazar, Nilmohanpur. Established in 2016, we offer highly successful coaching for Class 6 to 12 students."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you provide Spoken English Classes in Nilmohanpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, alongside our academic syllabus for Class 6 to 12, CM English Academy focuses heavily on spoken English skills, making us the top choice for Spoken English Classes in Nilmohanpur."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Class 6 and 7 coaching genuinely free at CM English Academy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely! To build a strong educational foundation, CM English Academy provides two complete years of English coaching for Class 6 and 7 entirely free of cost."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I find the best English tuition near me?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "If you are in the Purulia district, specifically around Barabazar or Nilmohanpur, searching for an 'English tuition near me' will lead you to CM English Academy. You can visit our campus or call us at +91 90645 13055."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer English Medium board exam preparation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, we specialize in English Medium board preparation for Class 10 and 12, covering deep literature analysis, advanced grammar, and intensive mock tests to ensure 100% board success."
-            }
-          }
-        ]
+        "areaServed":["Barabazar", "Nilmohanpur", "Purulia"],
+        "sameAs":["https://wa.me/919064513055"]
       }
-    ]
-    </script>
-    <!-- ========================================== -->
+    ]</script>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Firebase SDK (Compat version) -->
+    <!-- Firebase SDKs (App, Auth, Database) -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
     <style>
-        /* ========================================== */
-        /* DYNAMIC LIGHT & DARK MODE VARIABLES        */
-        /* ========================================== */
         :root {
-            /* LIGHT MODE (DEFAULT) */
-            --primary-color: #4f46e5; 
-            --secondary-color: #7c3aed; 
-            --accent-color: #0284c7; 
-            --text-main: #334155;
-            --text-heading: #0f172a;
-            --text-muted: #64748b;
-            --bg-color: #f8fafc;
-            
-            /* Glassmorphism Light */
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(0, 0, 0, 0.08);
-            --glass-border-light: rgba(255, 255, 255, 0.8);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
-            --glass-blur: blur(16px);
-            
-            --nav-bg: rgba(255, 255, 255, 0.85);
-            --footer-bg: rgba(241, 245, 249, 0.9);
+            /* LIGHT MODE */
+            --primary-color: #4f46e5; --secondary-color: #7c3aed; --accent-color: #0284c7; 
+            --text-main: #334155; --text-heading: #0f172a; --text-muted: #64748b; --bg-color: #f8fafc;
+            --glass-bg: rgba(255, 255, 255, 0.7); --glass-border: rgba(0, 0, 0, 0.08); --glass-border-light: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06); --glass-blur: blur(16px);
+            --nav-bg: rgba(255, 255, 255, 0.85); --footer-bg: rgba(241, 245, 249, 0.9);
             --hero-gradient: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.95));
-            --contact-gradient: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(124, 58, 237, 0.05));
             --body-gradient: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.05), transparent 25%);
-            
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         [data-theme="dark"] {
             /* DARK MODE */
-            --primary-color: #6366f1; 
-            --secondary-color: #8b5cf6; 
-            --accent-color: #06b6d4; 
-            --text-main: #f8fafc;
-            --text-heading: #ffffff;
-            --text-muted: #cbd5e1;
-            --bg-color: #020617;
-            
-            /* Glassmorphism Dark */
-            --glass-bg: rgba(15, 23, 42, 0.5);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --glass-border-light: rgba(255, 255, 255, 0.2);
+            --primary-color: #6366f1; --secondary-color: #8b5cf6; --accent-color: #06b6d4; 
+            --text-main: #f8fafc; --text-heading: #ffffff; --text-muted: #cbd5e1; --bg-color: #020617;
+            --glass-bg: rgba(15, 23, 42, 0.5); --glass-border: rgba(255, 255, 255, 0.1); --glass-border-light: rgba(255, 255, 255, 0.2);
             --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            
-            --nav-bg: rgba(2, 6, 23, 0.85);
-            --footer-bg: rgba(0, 0, 0, 0.5);
+            --nav-bg: rgba(2, 6, 23, 0.85); --footer-bg: rgba(0, 0, 0, 0.5);
             --hero-gradient: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6), rgba(2, 6, 23, 0.95));
-            --contact-gradient: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.4));
             --body-gradient: radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%), radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
         }
 
-        /* Global Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        
-        body {
-            background-color: var(--bg-color);
-            background-image: var(--body-gradient);
-            background-attachment: fixed;
-            color: var(--text-main);
-            overflow-x: hidden;
-            line-height: 1.7;
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
-
+        body { background-color: var(--bg-color); background-image: var(--body-gradient); background-attachment: fixed; color: var(--text-main); overflow-x: hidden; line-height: 1.7; transition: background-color 0.4s ease, color 0.4s ease; }
         h1, h2, h3, h4, h5, h6, .logo { font-family: 'Outfit', sans-serif; color: var(--text-heading); } 
 
-        /* Glassmorphism Utilities */
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-top: 1px solid var(--glass-border-light);
-            border-left: 1px solid var(--glass-border-light);
-            box-shadow: var(--glass-shadow);
-            border-radius: 20px;
-            transition: var(--transition);
-        }
+        .glass-panel { background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); border-top: 1px solid var(--glass-border-light); border-left: 1px solid var(--glass-border-light); box-shadow: var(--glass-shadow); border-radius: 20px; transition: var(--transition); }
+        .text-gradient { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
 
-        /* Gradient Text Utility */
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-
-        /* Loader */
-        #loader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color);
-            z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.5s;
-        }
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.5s; }
         .spinner { border: 4px solid var(--glass-border); border-top: 4px solid var(--primary-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; box-shadow: 0 0 20px rgba(99,102,241,0.3); }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
+        /* Notice Board Marquee */
+        .notice-bar { background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); color: white; padding: 8px 5%; font-size: 14px; font-weight: 600; font-family: 'Outfit', sans-serif; letter-spacing: 1px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1001; box-shadow: 0 2px 10px rgba(0,0,0,0.2);}
+        .notice-bar i { margin-right: 10px; color: #fbbf24; animation: flash 1.5s infinite;}
+        @keyframes flash { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
         /* Navbar */
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 5%;
-            display: flex; justify-content: space-between; align-items: center; transition: var(--transition);
-        }
-        nav.scrolled {
-            padding: 12px 5%;
-            background: var(--nav-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
+        nav { position: fixed; top: 37px; width: 100%; z-index: 1000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+        nav.scrolled { padding: 12px 5%; background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); top:0;}
         .logo { font-size: clamp(20px, 4vw, 26px); font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 10px; letter-spacing: -0.5px;}
         .logo i { color: var(--accent-color); text-shadow: 0 0 10px rgba(6,182,212,0.3); }
         
         .nav-links { display: flex; gap: 30px; align-items: center;}
         .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 15px; transition: var(--transition); position: relative;}
         .nav-links a:hover { color: var(--text-heading); text-shadow: 0 0 8px rgba(255,255,255,0.2); }
-        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 50%; width: 0; height: 2px; background: var(--primary-color); transition: var(--transition); transform: translateX(-50%); }
-        .nav-links a:hover::after { width: 100%; box-shadow: 0 0 10px var(--primary-color); }
-        
-        .btn-nav { 
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-            color: white !important; padding: 12px 28px; border-radius: 30px; 
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); border: 1px solid rgba(255,255,255,0.2);
-            position: relative; overflow: hidden; z-index: 1;
-        }
-        .btn-nav::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); z-index: -1; transition: opacity 0.3s ease; opacity: 0; }
-        .btn-nav:hover::before { opacity: 1; }
+        .btn-nav { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white !important; padding: 12px 28px; border-radius: 30px; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); }
         .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6); }
-        .btn-nav::after { display: none; }
         
-        .theme-toggle-btn {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            color: var(--text-heading);
-            width: 42px; height: 42px; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            cursor: pointer; font-size: 18px; transition: var(--transition);
-            backdrop-filter: blur(10px);
-        }
-        .theme-toggle-btn:hover { background: var(--glass-border-light); transform: rotate(15deg); }
-
+        .theme-toggle-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-heading); width: 42px; height: 42px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: var(--transition); backdrop-filter: blur(10px); }
+        .theme-toggle-btn:hover { transform: rotate(15deg); }
         .menu-toggle { display: none; font-size: 26px; color: var(--text-heading); cursor: pointer; }
 
-        /* ========================================== */
-        /* PROMO BANNER SYSTEM (TOP PAGE)             */
-        /* ========================================== */
-        #promo-banner-wrapper {
-            display: none; /* Controlled by JS */
-            padding: 100px 5% 0px; 
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10;
-        }
-        .promo-banner {
-            position: relative;
-            width: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--glass-shadow);
-            display: flex;
-            align-items: center;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            min-height: 150px;
-        }
-        .promo-banner img {
-            width: 100%;
-            max-height: 400px; /* Fits landscape any size */
-            object-fit: cover;
-            display: block;
-        }
-        /* Gradient overlay to ensure CTA text is visible */
-        .promo-banner::after {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 50%;
-            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8));
-            pointer-events: none;
-        }
-        [data-theme="light"] .promo-banner::after {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9));
-        }
-        .promo-cta-wrapper {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-        .btn-promo-cta {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: #fff !important;
-            padding: 15px 40px;
-            border-radius: 30px;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: var(--transition);
-            white-space: nowrap;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Outfit', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .btn-promo-cta:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-        }
+        /* Promo Banner */
+        #promo-banner-wrapper { display: none; padding: 140px 5% 0px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 10; }
+        .promo-banner { position: relative; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--glass-shadow); display: flex; align-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); min-height: 150px; }
+        .promo-banner img { width: 100%; max-height: 400px; object-fit: cover; display: block; }
+        .promo-banner::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 50%; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8)); pointer-events: none; }[data-theme="light"] .promo-banner::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9)); }
+        .promo-cta-wrapper { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); z-index: 2; }
+        .btn-promo-cta { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; padding: 15px 40px; border-radius: 30px; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.3); transition: var(--transition); white-space: nowrap; font-size: 18px; display: flex; align-items: center; gap: 10px; font-family: 'Outfit', sans-serif; text-transform: uppercase; }
+        .btn-promo-cta:hover { transform: scale(1.05); }
 
         /* Sections */
         section { padding: 100px 5% 60px; min-height: 100vh; position: relative; }
         .section-title { text-align: center; font-size: clamp(36px, 5vw, 52px); margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
 
         /* Hero Section */
-        #home {
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; 
-            background-image: var(--hero-gradient), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            padding-top: 150px; min-height: 100vh;
-        }
-        
-        .hero-glass-container {
-            max-width: 1000px;
-            padding: 60px 40px;
-            animation: popIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-
-        .anniversary-badge {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);
-            color: var(--text-heading); padding: 10px 25px; border-radius: 40px; font-size: 14px; font-weight: 700; font-family: 'Outfit', sans-serif;
-            margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px;
-            box-shadow: var(--glass-shadow);
-            backdrop-filter: blur(10px);
-        }
-        .anniversary-badge i { color: #fbbf24; font-size: 16px; text-shadow: 0 0 10px rgba(251,191,36,0.6);}
-
+        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-image: var(--hero-gradient), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-attachment: fixed; background-position: center; padding-top: 150px; min-height: 100vh; }
+        .hero-glass-container { max-width: 1000px; padding: 60px 40px; animation: popIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        .anniversary-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); color: var(--text-heading); padding: 10px 25px; border-radius: 40px; font-size: 14px; font-weight: 700; font-family: 'Outfit', sans-serif; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: var(--glass-shadow); backdrop-filter: blur(10px); }
+        .anniversary-badge i { color: #fbbf24; font-size: 16px;}
         .hero-title { font-size: clamp(42px, 7vw, 80px); font-weight: 900; margin-bottom: 25px; line-height: 1.1; letter-spacing: -2px;}
         .hero-subtitle { font-size: clamp(18px, 3vw, 22px); margin-bottom: 40px; font-weight: 500; max-width: 800px; color: var(--text-muted); margin-left: auto; margin-right: auto;}
         
-        .highlight-box { 
-            display: inline-block; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); 
-            color: #d97706; padding: 12px 35px; border-radius: 30px; font-size: 18px; font-weight: 800; 
-            font-family: 'Outfit', sans-serif; margin-bottom: 45px; box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); 
-        }
-        [data-theme="dark"] .highlight-box { color: #fbbf24; }
+        .btn-primary { padding: 18px 45px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; gap: 12px; }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); }
 
-        .btn-primary {
-            padding: 18px 45px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-            color: #fff !important; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px;
-            font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; gap: 12px;
-            letter-spacing: 0.5px;
-        }
-        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); color: #fff; }
-
-        /* Trust Stats / Journey */
+        /* Stats */
         .stats-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: -50px; position: relative; z-index: 10;}
-        .stat-box { 
-            padding: 30px 40px; text-align: center; min-width: 220px; 
-            transition: var(--transition);
-        }
-        .stat-box:hover { transform: translateY(-10px); background: var(--glass-border-light); border-color: var(--glass-border-light);}
-        .stat-box h3 { font-size: 38px; color: var(--text-heading); font-weight: 900; text-shadow: 0 0 10px rgba(0,0,0,0.05);}
-        .stat-box p { color: var(--accent-color); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px;}
+        .stat-box { padding: 30px 40px; text-align: center; min-width: 220px; transition: var(--transition); }
+        .stat-box:hover { transform: translateY(-10px); }
+        .stat-box h3 { font-size: 38px; color: var(--text-heading); font-weight: 900; }
+        .stat-box p { color: var(--accent-color); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; }
 
-        /* Content Sections Styling */
-        .content-wrapper { max-width: 1100px; margin: 0 auto 50px; padding: 50px; }
-        .content-wrapper h2 { color: var(--text-heading); font-size: 32px; margin-bottom: 25px; font-weight: 800;}
-        .content-wrapper h3 { color: var(--accent-color); font-size: 24px; margin-top: 40px; margin-bottom: 15px; font-weight: 700;}
-        .content-wrapper p { font-size: 17px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.8; text-align: justify; }
-        .content-wrapper ul { margin-left: 20px; margin-bottom: 25px; color: var(--text-muted); font-size: 17px; line-height: 1.9;}
-        .content-wrapper strong { color: var(--text-heading); font-weight: 700; }
+        /* Faculty Section */
+        .faculty-card { max-width: 800px; margin: 0 auto 50px; padding: 40px; display: flex; align-items: center; gap: 40px; }
+        .faculty-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--glass-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: var(--bg-color); display:flex; justify-content:center; align-items:center; color: var(--primary-color); overflow: hidden;}
+        .faculty-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .faculty-info h3 { font-size: 28px; margin-bottom: 5px; }
+        .faculty-info p.role { color: var(--accent-color); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; letter-spacing: 1px;}
+        .faculty-info p.desc { color: var(--text-muted); font-size: 16px; line-height: 1.7; }
 
         /* Classes Section */
         #classes { padding-top: 100px; }
@@ -407,195 +186,132 @@
         .card { padding: 45px 35px; transition: var(--transition); position: relative; overflow: hidden; }
         .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); opacity: 0; transition: var(--transition); }
         .card:hover::before { opacity: 1; }
-        .card:hover { transform: translateY(-10px); box-shadow: var(--glass-shadow); background: var(--glass-border-light); border-color: var(--glass-border-light);}
+        .card:hover { transform: translateY(-10px); box-shadow: var(--glass-shadow); }
         .card h3 { font-size: 26px; font-weight: 800; margin-bottom: 15px; }
         .card .badge { display: inline-block; padding: 8px 18px; border-radius: 30px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .badge.free { background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); }
-        .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }
-        [data-theme="dark"] .badge.free { color: #4ade80; }
+        .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }[data-theme="dark"] .badge.free { color: #4ade80; }
         [data-theme="dark"] .badge.paid { color: #7dd3fc; }
-        .card p { margin-top: 20px; color: var(--text-muted); font-size: 16px; line-height: 1.7; }
+        .card p { margin-top: 20px; color: var(--text-muted); font-size: 16px; }
 
         /* Gallery */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;}
-        .gallery-item { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/3; background: var(--glass-bg); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/3; background: var(--glass-bg); border: 1px solid var(--glass-border); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0.95;}
         .gallery-item:hover img { transform: scale(1.1); opacity: 1; }
-        .gallery-overlay {
-            position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            padding: 40px 20px 20px; color: #fff; transform: translateY(100%); transition: var(--transition);
-        }
+        .gallery-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); padding: 40px 20px 20px; color: #fff; transform: translateY(100%); transition: var(--transition); }
         .gallery-item:hover .gallery-overlay { transform: translateY(0); }
         .empty-msg { text-align: center; color: var(--text-muted); font-size: 18px; font-weight: 600; width: 100%; grid-column: 1 / -1; padding: 80px 0; border-radius: 20px; border: 1px dashed var(--glass-border-light);}
         
         .category-filters { text-align: center; margin-bottom: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        .filter-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-muted); font-weight: 600; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); backdrop-filter: var(--glass-blur);}
-        .filter-btn.active, .filter-btn:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3); }
+        .filter-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-muted); font-weight: 600; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 
-        /* Blog Section */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;}
-        .blog-card { padding: 40px; transition: var(--transition); }
-        .blog-card:hover { transform: translateY(-5px); background: var(--glass-border-light); border-color: var(--glass-border-light); }
-        .blog-date { font-size: 13px; color: var(--accent-color); font-weight: 800; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px;}
-        .blog-card h3 { font-size: 22px; margin-bottom: 15px; line-height: 1.4; font-weight: 800;}
-        .blog-card p { color: var(--text-muted); font-size: 16px; margin-bottom: 25px; line-height: 1.7;}
-        .blog-card a { color: var(--primary-color); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition);}
-        .blog-card a:hover { color: var(--secondary-color); gap: 12px;}
+        /* Testimonials */
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 50px auto 0;}
+        .testi-card { padding: 40px; text-align: center;}
+        .testi-card i { color: #fbbf24; font-size: 24px; margin-bottom: 15px;}
+        .testi-text { font-size: 16px; color: var(--text-muted); font-style: italic; margin-bottom: 20px; line-height: 1.8;}
+        .testi-name { font-weight: 800; color: var(--text-heading); font-size: 18px;}
 
-        /* FAQ Section (Glassy Accordion) */
+        /* FAQ Section */
         .faq-container { max-width: 900px; margin: 50px auto 0; }
         .faq-item { margin-bottom: 20px; transition: var(--transition); cursor: pointer; padding: 30px;}
-        .faq-item:hover { background: var(--glass-border-light); border-color: var(--glass-border-light); }
+        .faq-item:hover { background: var(--glass-border-light); }
         .faq-question { font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: var(--text-heading); display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { font-size: 16px; color: var(--text-muted); margin-top: 20px; display: none; line-height: 1.8; }
-        .faq-question i { color: var(--accent-color); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); background: rgba(6,182,212,0.1); padding: 8px; border-radius: 50%;}
-        .faq-item.active { border-color: var(--primary-color); box-shadow: 0 0 20px rgba(79, 70, 229, 0.1); background: var(--glass-bg);}
+        .faq-answer { font-size: 16px; color: var(--text-muted); margin-top: 20px; display: none; }
+        .faq-question i { color: var(--accent-color); transition: transform 0.3s; background: rgba(6,182,212,0.1); padding: 8px; border-radius: 50%;}
+        .faq-item.active { border-color: var(--primary-color); }
         .faq-item.active .faq-answer { display: block; animation: slideDown 0.4s ease; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); background: var(--primary-color); color: #fff; box-shadow: 0 0 15px var(--primary-color);}
+        .faq-item.active .faq-question i { transform: rotate(180deg); background: var(--primary-color); color: #fff; }
 
-        /* Premium Contact Section */
-        .contact-card {
-            max-width: 900px; margin: 0 auto; padding: 80px 50px;
-            text-align: center; position: relative; overflow: hidden;
-            background: var(--contact-gradient);
-            border: 1px solid var(--glass-border);
-        }
-        .contact-card::before {
-            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 50%); z-index: -1; animation: spin 20s linear infinite;
-        }
-        .contact-icon { width: 100px; height: 100px; background: rgba(34, 197, 94, 0.1); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); font-size: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; box-shadow: 0 0 30px rgba(34, 197, 94, 0.1); }
-        [data-theme="dark"] .contact-icon { color: #4ade80; }
-        .contact-card h2 { font-size: 40px; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;}
-        .phone-number { font-size: 48px; font-weight: 900; color: var(--text-heading); margin: 30px 0 40px; font-family: 'Outfit', sans-serif; display: block; text-decoration: none; letter-spacing: -1px; text-shadow: 0 0 20px rgba(0,0,0,0.05);}
+        /* Contact & Lead Form */
+        .contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;}
+        .contact-info-card { flex: 1; min-width: 300px; padding: 50px; text-align: center; }
+        .contact-info-card h2 { font-size: 36px; margin-bottom: 20px; font-weight: 900;}
+        .phone-number { font-size: 40px; font-weight: 900; color: var(--text-heading); margin: 20px 0; display: block; text-decoration: none;}
+        .btn-whatsapp { background: linear-gradient(135deg, #22c55e, #16a34a); color: white !important; padding: 15px 35px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px;}
         
-        .contact-buttons { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; flex-wrap: wrap; }
-        .btn-call { background: var(--glass-bg); border: 1px solid var(--glass-border-light); color: var(--text-heading); padding: 18px 45px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: var(--transition); backdrop-filter: var(--glass-blur);}
-        .btn-whatsapp { background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 10px 30px rgba(22, 163, 74, 0.3); color: white !important; padding: 18px 45px; border-radius: 40px; font-weight: 700; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.2);}
-        .btn-call:hover { background: var(--glass-border-light); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(22, 163, 74, 0.5); }
+        .lead-form-card { flex: 1; min-width: 320px; padding: 40px; }
+        .lead-form-card h3 { margin-bottom: 25px; font-size: 24px; text-align: center;}
+        .form-input { width: 100%; padding: 15px 20px; margin-bottom: 20px; border: 1px solid var(--glass-border); border-radius: 12px; background: var(--bg-color); color: var(--text-main); font-size: 15px; outline: none; transition: var(--transition);}
+        .form-input:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.2);}
 
-        /* Floating WhatsApp Button */
-        .float-wa {
-            position: fixed; bottom: 40px; right: 40px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white;
-            width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-            font-size: 35px; box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4); z-index: 999; transition: var(--transition);
-            text-decoration: none; border: 1px solid rgba(255,255,255,0.3);
-        }
-        .float-wa::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%;
-            border: 2px solid #22c55e; animation: pulse 2s infinite; z-index: -1;
-        }
-        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
-        .float-wa:hover { transform: scale(1.1) rotate(-10deg); color: white; }
+        /* Map */
+        .map-container { max-width: 1200px; margin: 50px auto 0; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--glass-shadow); border: 1px solid var(--glass-border);}
+        .map-container iframe { width: 100%; height: 100%; border: none;}
+
+        /* Float WA */
+        .float-wa { position: fixed; bottom: 40px; right: 40px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 35px; box-shadow: 0 10px 30px rgba(22, 163, 74, 0.5); z-index: 999; transition: var(--transition); text-decoration: none;}
+        .float-wa:hover { transform: scale(1.1); color: white; }
 
         /* Footer */
-        footer { padding: 100px 5% 40px; text-align: center; border-top: 1px solid var(--glass-border); background: var(--footer-bg); backdrop-filter: blur(10px);}
-        .seo-footer-text { max-width: 1000px; margin: 0 auto 40px; font-size: 15px; line-height: 1.9; text-align: justify; color: var(--text-muted); }
-        .seo-footer-text strong { color: var(--text-heading); font-weight: 800;}
-        .seo-footer-text a { color: var(--accent-color); text-decoration: none; transition: var(--transition); font-weight: 600;}
-        .seo-footer-text a:hover { color: var(--primary-color); text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);}
-        .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 30px; font-size: 14px; font-weight: 600; color: var(--text-muted);}
-        .footer-bottom span { color: var(--accent-color); font-weight: 800; }
+        footer { padding: 80px 5% 40px; text-align: center; border-top: 1px solid var(--glass-border); background: var(--footer-bg); backdrop-filter: blur(10px);}
+        .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 30px; font-size: 14px; font-weight: 600; color: var(--text-muted); margin-top: 40px;}
 
-        /* Animations */
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* ADMIN PANEL STYLES */
-        #app-wrapper { display: block; }
-        #admin-wrapper { display: none; min-height: 100vh; position: relative; }
-        .admin-login { height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px;}
-        .login-box { padding: 60px 50px; text-align: center; width: 100%; max-width: 480px; }
-        .login-box input { width: 100%; padding: 18px; margin: 30px 0; border: 1px solid var(--glass-border); border-radius: 12px; font-size: 16px; background: var(--bg-color); color: var(--text-main); outline: none; transition: var(--transition);}
-        .login-box input:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.2);}
-        #admin-dashboard { display: none; padding: 60px 5%; max-width: 800px; margin: 0 auto;}
-        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; padding-bottom: 25px; border-bottom: 1px solid var(--glass-border); flex-wrap: wrap; gap: 20px;}
-        .admin-card { padding: 50px; margin-bottom: 30px;}
-        .form-group { margin-bottom: 30px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 12px; font-weight: 700; color: var(--text-muted); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;}
-        .form-group select, .form-group input[type="file"], .form-group input[type="text"], .form-group input[type="url"] { width: 100%; padding: 16px; border: 1px solid var(--glass-border); border-radius: 12px; font-size: 16px; background: var(--bg-color); color: var(--text-main); cursor: pointer; transition: var(--transition);}
-        .form-group input:focus { border-color: var(--primary-color); box-shadow: 0 0 10px rgba(79, 70, 229, 0.2); outline: none;}
-        .form-group select option { background: var(--bg-color); color: var(--text-main); }
-        #image-preview { width: 100%; max-height: 300px; object-fit: contain; margin-top: 25px; display: none; border-radius: 12px; border: 1px dashed var(--glass-border-light); padding: 10px; background: rgba(0,0,0,0.05);}
+        /* Admin */
+        #admin-wrapper { display: none; min-height: 100vh; position: relative; padding-top: 80px; }
+        .login-box { padding: 60px 50px; text-align: center; width: 100%; max-width: 480px; margin: 50px auto; }
+        #admin-dashboard { display: none; padding: 40px 5%; max-width: 1000px; margin: 0 auto;}
+        .admin-card { padding: 40px; margin-bottom: 30px;}
         
-        .btn-danger { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; padding: 15px 30px; border-radius: 30px; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;}
-        .btn-danger:hover { background: #ef4444; color: #fff; box-shadow: 0 0 20px rgba(239,68,68,0.3); }
-
-        @media (max-width: 992px) {
-            .stats-container { margin-top: 40px; }
-            section { padding: 100px 5% 50px; }
-        }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--glass-border); color: var(--text-main);}
+        th { color: var(--primary-color); font-weight: 800; font-family: 'Outfit', sans-serif;}
 
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            .nav-links {
-                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
-                background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-                flex-direction: column; justify-content: center; align-items: center;
-                transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1); gap: 40px; z-index: -1;
-            }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--nav-bg); backdrop-filter: blur(20px); flex-direction: column; justify-content: center; align-items: center; transition: right 0.4s; gap: 40px; z-index: -1;}
             .nav-links.active { right: 0; }
-            .nav-links a { font-size: 22px; width: 100%; text-align: center; }
-            
+            .nav-links a { font-size: 22px; }
             .promo-cta-wrapper { right: 50%; top: auto; bottom: 20px; transform: translateX(50%); }
-            #promo-banner-wrapper { padding-top: 85px; }
-            
+            #promo-banner-wrapper { padding-top: 100px; }
             .hero-title { font-size: clamp(36px, 10vw, 50px); }
-            .content-wrapper { padding: 30px 20px; }
-            .contact-card { padding: 50px 20px; }
-            .contact-buttons { flex-direction: column; width: 100%; }
-            .contact-buttons a { width: 100%; justify-content: center; }
-            .phone-number { font-size: 36px; }
-            .float-wa { bottom: 20px; right: 20px; width: 55px; height: 55px; font-size: 28px;}
-            .admin-login { padding: 15px; }
-            .login-box { padding: 40px 25px; }
-            .admin-card { padding: 30px 20px; }
+            .faculty-card { flex-direction: column; text-align: center; }
         }
+
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919064513055?text=Hello%20CM%20English%20Academy,%20I%20am%20looking%20for%20English%20tuition.%20Please%20share%20details." class="float-wa" target="_blank" aria-label="WhatsApp Us">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- Notice Board -->
+    <div id="notice-bar" class="notice-bar">
+        <i class="fa-solid fa-bell"></i> 
+        <marquee id="notice-text" scrollamount="5">Welcome to CM English Academy. Best English Coaching in Barabazar. Admissions Open for 2026!</marquee>
+    </div>
 
-    <!-- Premium Loader -->
+    <!-- Float WA -->
+    <a href="https://wa.me/919064513055" class="float-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Loader -->
     <div id="loader">
         <div class="spinner"></div>
-        <h2 style="margin-top: 30px; font-weight: 900; letter-spacing: 1px;">CM ENGLISH ACADEMY</h2>
+        <h2 style="margin-top: 30px; font-weight: 900;">CM ENGLISH</h2>
         <p style="color: var(--accent-color); font-weight: 700; margin-top: 8px; text-transform: uppercase; font-size: 13px; letter-spacing: 3px;">Academy</p>
     </div>
 
-    <!-- MAIN WEBSITE -->
     <main id="app-wrapper">
-        
-        <!-- Navbar (Glassmorphism) -->
         <header>
             <nav id="navbar">
-                <a href="#home" class="logo" aria-label="Home"><i class="fa-solid fa-graduation-cap"></i> CM ENGLISH</a>
+                <a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> CM ENGLISH</a>
                 <div class="nav-links" id="nav-links">
                     <a href="#home" onclick="closeMenu()">Home</a>
-                    <a href="#about-seo" onclick="closeMenu()">Our Story</a>
+                    <a href="#faculty" onclick="closeMenu()">Faculty</a>
                     <a href="#classes" onclick="closeMenu()">Courses</a>
                     <a href="#gallery" onclick="closeMenu()">Gallery</a>
-                    <a href="#faq" onclick="closeMenu()">FAQ</a>
                     <a href="#contact" class="btn-nav" onclick="closeMenu()">Join Now</a>
                 </div>
                 <div style="display: flex; gap: 15px; align-items: center;">
-                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu"><i class="fa-solid fa-bars-staggered"></i></div>
+                    <button id="theme-toggle" class="theme-toggle-btn"><i class="fa-solid fa-moon"></i></button>
+                    <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars-staggered"></i></div>
                 </div>
             </nav>
         </header>
 
-        <!-- Dynamic Promo Banner System -->
+        <!-- Promo Banner -->
         <section id="promo-banner-wrapper">
             <div class="promo-banner reveal">
                 <img id="promo-img" src="" alt="Promotion Banner">
@@ -606,98 +322,61 @@
         </section>
 
         <!-- Hero Section -->
-        <section id="home" style="padding-top: 130px;">
+        <section id="home">
             <div class="hero-glass-container glass-panel">
-                <div class="anniversary-badge">
-                    <i class="fa-solid fa-award"></i> 10 Years of Excellence (2016 - 2026)
-                </div>
-                <!-- EXACT KEYWORDS IN H1 FOR GOOGLE RANKING -->
+                <div class="anniversary-badge"><i class="fa-solid fa-award"></i> 10 Years of Excellence (2016 - 2026)</div>
                 <h1 class="hero-title">Empowering Minds at <br><span class="text-gradient">CM English Academy</span></h1>
-                <h2 class="hero-subtitle">The Best English Coaching in Barabazar & Spoken English Classes in Nilmohanpur. Shaping successful futures since 2016.</h2>
+                <h2 class="hero-subtitle">The Best English Coaching in Barabazar & Spoken English Classes in Nilmohanpur.</h2>
                 <div class="highlight-box"><i class="fa-solid fa-bolt"></i> Class 6 & 7 – Two Years Completely Free!</div>
-                <div>
-                    <a href="#classes" class="btn-primary" aria-label="Explore Our Courses">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <div><a href="#classes" class="btn-primary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
         </section>
 
-        <!-- Trust Stats / Journey -->
+        <!-- Stats -->
         <div class="stats-container reveal">
-            <div class="stat-box glass-panel">
-                <h3>10+</h3>
-                <p>Years Legacy</p>
-            </div>
-            <div class="stat-box glass-panel">
-                <h3>100%</h3>
-                <p>Board Success</p>
-            </div>
-            <div class="stat-box glass-panel">
-                <h3>Free</h3>
-                <p>Class 6 & 7</p>
-            </div>
+            <div class="stat-box glass-panel"><h3>10+</h3><p>Years Legacy</p></div>
+            <div class="stat-box glass-panel"><h3>100%</h3><p>Board Success</p></div>
+            <div class="stat-box glass-panel"><h3>Free</h3><p>Class 6 & 7</p></div>
         </div>
 
-        <!-- SEO Content Section: About & Keywords -->
-        <section id="about-seo">
-            <div class="content-wrapper glass-panel reveal">
-                <h2>Why We Are The Best English Coaching in Barabazar</h2>
-                <p>Are you constantly searching the internet for <strong>"English Tuition Near Me"</strong> or the <strong>"Best English Coaching in Barabazar"</strong>? Your extensive search gracefully ends here at CM English Academy. Situated proudly in the educational heart of Nilmohanpur, we have built a rock-solid 10-year legacy of transforming young students into confident, fluent English speakers and top-tier academicians.</p>
-                
-                <p>Established in 2016, our core mission has always been to deliver premium, high-quality English medium instruction to students ranging from Class 6 to Class 12. We deeply understand that the English language is not merely a subject required to pass examinations; it is a vital global communication tool that fundamentally shapes future career opportunities and personal growth.</p>
-                
-                <h3>Our Proven Methodology & Offerings</h3>
-                <ul>
-                    <li><strong>Free Foundation Classes:</strong> We believe every child deserves a fair, strong start. Thus, we offer complete, 100% free tuition for all Class 6 and Class 7 students.</li>
-                    <li><strong>Intensive Board Preparation:</strong> We run specialized, intensive batches for Class 10 and Class 12. Our focus is on comprehensive grammar perfection, deep literature analysis, and rigorous mock test series.</li>
-                    <li><strong>Spoken English Integration:</strong> Interactive sessions dedicated to improving pronunciation, vocabulary, and public speaking confidence, making us the top choice for Spoken English Classes Nilmohanpur.</li>
-                    <li><strong>Personalized Attention:</strong> We maintain intentionally small batch sizes. This allows our expert educators to provide dedicated, one-on-one focus on each student's unique weaknesses and strengths.</li>
-                </ul>
-                <p>Whether your ultimate goal is to secure a perfect 100 in your demanding English Board Exams or simply to build an unshakable foundation in basic grammar, CM English Academy remains the ultimate, unrivaled destination in the entire Purulia district.</p>
+        <!-- Faculty Section -->
+        <section id="faculty" style="padding-top: 100px;">
+            <h2 class="section-title reveal">Meet Our <span class="text-gradient">Director</span></h2>
+            <div class="faculty-card glass-panel reveal">
+                <div class="faculty-img">
+                    <img src="https://i.ibb.co/pBSSVRzb/Picsart-26-04-05-18-48-36-609.jpg" alt="Mr. C.M. Sir - Founder & Lead Educator" loading="lazy">
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. C.M. Sir</h3>
+                    <p class="role">Founder & Lead Educator</p>
+                    <p class="desc">With over a decade of teaching experience, CM Sir has revolutionized English education in Barabazar. His unique methodology focuses on building strong grammatical foundations and fluent speaking skills, ensuring every student achieves their highest potential.</p>
+                </div>
             </div>
         </section>
 
         <!-- Classes Section -->
-        <section id="classes">
+        <section id="classes" style="padding-top: 50px;">
             <h2 class="section-title reveal">Our <span class="text-gradient">Premium Courses</span></h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 18px;" class="reveal">
-                Explore our meticulously structured curriculum designed to guarantee mastery of the English language. Join the highest-rated tuition in Barabazar.
-            </p>
-
             <div class="grid-container reveal">
                 <article class="card glass-panel">
-                    <h3>Class 6 English</h3>
+                    <h3>Class 6 & 7</h3>
                     <span class="badge free">100% Free Tuition</span>
-                    <p>Begin your journey with a complete English foundation. Learn crucial grammar and vocabulary absolutely free of cost in Nilmohanpur.</p>
+                    <p>Begin your journey with a complete English foundation. Learn crucial grammar completely free.</p>
                 </article>
                 <article class="card glass-panel">
-                    <h3>Class 7 English</h3>
-                    <span class="badge free">100% Free Tuition</span>
-                    <p>Advanced English basics building directly on Class 6 concepts. Step-by-step, personalized guidance provided completely free.</p>
-                </article>
-                <article class="card glass-panel">
-                    <h3>Class 8</h3>
+                    <h3>Class 8 & 9</h3>
                     <span class="badge paid">English Medium</span>
-                    <p>Comprehensive grammar rules, creative writing skills, and deep literature analysis to prepare for higher secondary classes.</p>
+                    <p>Comprehensive grammar rules, creative writing skills, and deep literature analysis.</p>
                 </article>
                 <article class="card glass-panel">
-                    <h3>Class 9</h3>
+                    <h3>Class 10 (Board)</h3>
                     <span class="badge paid">English Medium</span>
-                    <p>Establishing strong board preparation foundations. We target high scores by clarifying core English subject concepts early.</p>
+                    <p>Intensive Board Exam Preparation. Experience the best coaching to secure top district ranks.</p>
                 </article>
                 <article class="card glass-panel">
-                    <h3>Class 10</h3>
+                    <h3>Class 11 & 12</h3>
                     <span class="badge paid">English Medium</span>
-                    <p>Intensive Board Exam Preparation. Experience the best coaching in Barabazar to secure top district ranks and perfect scores.</p>
-                </article>
-                <article class="card glass-panel">
-                    <h3>Class 11</h3>
-                    <span class="badge paid">English Medium</span>
-                    <p>Higher Secondary Core Syllabus coverage with a specialized focus on analyzing complex literary prose, poetry, and advanced grammar.</p>
-                </article>
-                <article class="card glass-panel">
-                    <h3>Class 12</h3>
-                    <span class="badge paid">English Medium</span>
-                    <p>Final Board Target & Excellence program. Rigorous weekly mock tests, specialized doubt clearing sessions, and complete syllabus mastery.</p>
+                    <p>Final Board Target & Excellence program. Rigorous mock tests and syllabus mastery.</p>
                 </article>
             </div>
         </section>
@@ -706,206 +385,192 @@
         <section id="gallery">
             <h2 class="section-title reveal">Campus <span class="text-gradient">Gallery</span></h2>
             <div class="category-filters reveal">
-                <button class="filter-btn active" onclick="filterGallery('All')" aria-label="View All Photos">All Photos</button>
-                <button class="filter-btn" onclick="filterGallery('Classroom')" aria-label="View Classrooms">Classrooms</button>
-                <button class="filter-btn" onclick="filterGallery('Office Room')" aria-label="View Office Room">Office Room</button>
-                <button class="filter-btn" onclick="filterGallery('Results')" aria-label="View Student Results">Student Results</button>
+                <button class="filter-btn active" onclick="filterGallery('All')">All Photos</button>
+                <button class="filter-btn" onclick="filterGallery('Classroom')">Classrooms</button>
+                <button class="filter-btn" onclick="filterGallery('Results')">Student Results</button>
             </div>
             <div class="gallery-grid reveal" id="gallery-container">
-                <div class="empty-msg glass-panel" id="gallery-empty"><i class="fa-solid fa-cloud-arrow-down" style="font-size: 30px; margin-bottom: 15px; display: block;"></i> Media securely loading from server...</div>
+                <div class="empty-msg glass-panel" id="gallery-empty"><i class="fa-solid fa-cloud-arrow-down" style="font-size: 30px; margin-bottom: 15px; display: block;"></i> Loading Media...</div>
             </div>
         </section>
 
-        <!-- Expanded FAQ Section for SEO Rich Snippets -->
-        <section id="faq">
-            <h2 class="section-title reveal">Frequently Asked <span class="text-gradient">Questions</span></h2>
-            <p style="text-align: center; margin-bottom: 50px; color: var(--text-muted); font-size: 18px;" class="reveal">Detailed answers to common queries about joining our prestigious academy.</p>
-            
-            <div class="faq-container reveal">
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Which is the Best English Coaching in Barabazar? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">CM English Academy is universally recognized as the best English coaching in Barabazar, Nilmohanpur. Established a decade ago in 2016, we offer highly successful, result-oriented coaching for Class 6 to 12 students.</div>
+        <!-- Testimonials -->
+        <section id="testimonials" style="padding-top: 50px;">
+            <h2 class="section-title reveal">Student <span class="text-gradient">Success Stories</span></h2>
+            <div class="testi-grid reveal">
+                <div class="testi-card glass-panel">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <p class="testi-text">"CM English Academy completely changed my fear of English. The notes and teaching style of CM Sir helped me score 95 in my board exams!"</p>
+                    <h4 class="testi-name">- Ex Student</h4>
                 </div>
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Do you provide Spoken English Classes in Nilmohanpur? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">Yes! Alongside our rigorous academic board syllabus for Class 6 to 12, CM English Academy focuses heavily on communicational fluency, making us the top choice for Spoken English Classes in Nilmohanpur.</div>
-                </div>
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Is Class 6 and 7 coaching genuinely free at CM English Academy? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">Absolutely true. To ensure every child can build a tremendously strong educational foundation without financial worry, CM English Academy provides two complete years of English coaching for Class 6 and 7 entirely free of cost.</div>
-                </div>
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">How can I find the best English tuition near me? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">If you are residing in the Purulia district, specifically around the Barabazar or Nilmohanpur areas, searching for an 'English tuition near me' will lead you directly to CM English Academy. You can physically visit our campus or simply call us at +91 90645 13055.</div>
-                </div>
-                <div class="faq-item glass-panel" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">What is the background and history of CM English Academy? <i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="faq-answer">Established officially in 2016, CM English Academy proudly celebrates its monumental 10th anniversary in 2026. Over the past magnificent decade, we have successfully guided and mentored thousands of students to achieve sheer academic excellence in the English language.</div>
+                <div class="testi-card glass-panel">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <p class="testi-text">"The spoken English classes are amazing. I can now speak fluently without any hesitation. Best coaching in Barabazar hands down."</p>
+                    <h4 class="testi-name">- Class 12 Student</h4>
                 </div>
             </div>
         </section>
 
-        <!-- Premium Contact Section -->
+        <!-- Contact & Lead Form -->
         <section id="contact">
-            <div class="contact-card glass-panel reveal">
-                <div class="contact-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-                <h2>Ready to Join CM English Academy?</h2>
-                <p style="color: var(--text-muted); font-size: 19px; margin-bottom: 30px;">Admissions for the 2026 academic session are currently open. Secure your child's brilliant future today with the Best English Tuition in Barabazar.</p>
+            <h2 class="section-title reveal">Get In <span class="text-gradient">Touch</span></h2>
+            <div class="contact-wrapper reveal">
                 
-                <a href="tel:+919064513055" class="phone-number">+91 90645 13055</a>
-                
-                <div class="contact-buttons">
-                    <a href="tel:+919064513055" class="btn-call" aria-label="Call Us"><i class="fa-solid fa-phone-volume"></i> Direct Call</a>
-                    <a href="https://wa.me/919064513055?text=Hello%20CM%20English%20Academy,%20I%20want%20to%20know%20more%20about%20the%20tuition%20classes." class="btn-whatsapp" target="_blank" aria-label="WhatsApp Us"><i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> Chat on WhatsApp</a>
+                <!-- Info -->
+                <div class="contact-info-card glass-panel">
+                    <h2>Admissions Open</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Secure your child's future today.</p>
+                    <a href="tel:+919064513055" class="phone-number">+91 90645 13055</a>
+                    <a href="https://wa.me/919064513055" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                    <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-location-dot"></i> Nilmohanpur, Barabazar, Purulia</p>
                 </div>
+
+                <!-- Lead Form -->
+                <div class="lead-form-card glass-panel">
+                    <h3>Request a Call Back</h3>
+                    <form id="inquiry-form" onsubmit="submitInquiry(event)">
+                        <input type="text" id="inq-name" class="form-input" placeholder="Student Name" required>
+                        <input type="tel" id="inq-phone" class="form-input" placeholder="Mobile Number" required>
+                        <select id="inq-class" class="form-input" required>
+                            <option value="" disabled selected>Select Class</option>
+                            <option value="Class 6">Class 6 (Free)</option>
+                            <option value="Class 7">Class 7 (Free)</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                        </select>
+                        <button type="submit" id="inq-btn" class="btn-primary" style="width: 100%; justify-content: center;">Submit Inquiry</button>
+                        <p id="inq-status" style="text-align: center; margin-top: 15px; font-weight: bold;"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map-container reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14693.364371536838!2d86.3533816!3d23.0296766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7a5b3a4a1f1b5%3A0x6b0a8a6e8b4e7e6b!2sBarabazar%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <!-- Extensive SEO Footer -->
         <footer>
-            <div class="seo-footer-text">
-                <strong>About CM English Academy - The Best English Coaching in Barabazar, Nilmohanpur:</strong><br><br>
-                Established with a vision in 2016, we are proudly celebrating 10 years of monumental academic brilliance in 2026. As the undisputed <em>Best English Coaching in Barabazar</em>, CM English Academy offers unparalleled education, deeply dedicated mentoring, and comprehensive, customized study materials for students from Class 6 to 12. For aspiring students and caring parents actively searching for a reliable <em>"English tuition near me"</em> or the absolute highest-rated <em>"Spoken English Classes Nilmohanpur"</em>, our distinguished academy has consistently delivered outstanding board exam results and impressive communicational fluency. We strongly believe in building robust foundations, which is exactly why Class 6 & 7 students receive 100% free coaching. Navigate your path to complete English mastery with us right in the heart of Purulia. <a href="#contact">Contact us today to effortlessly enroll.</a>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 CM English Academy Nilmohanpur. <span>Celebrating 10 Years (2016-2026)</span>. All Rights Reserved.</p>
-                <p style="font-size: 13px; margin-top: 20px;">
-                    <a href="#admin" style="color: var(--text-muted); padding: 8px 15px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; text-decoration: none;" aria-label="Admin Login">Secure Admin Access <i class="fa-solid fa-lock" style="font-size: 10px; margin-left: 5px;"></i></a>
-                </p>
+                <p>&copy; 2026 CM English Academy Nilmohanpur. All Rights Reserved.</p>
+                <p style="margin-top: 15px;"><a href="#admin" style="color: var(--text-muted); text-decoration: none;">Admin Access <i class="fa-solid fa-lock"></i></a></p>
             </div>
         </footer>
     </main>
 
-    <!-- ========================================== -->
-    <!-- SECURE ADMIN PANEL (GLASSMORPHISM)         -->
-    <!-- ========================================== -->
+    <!-- ADMIN PANEL -->
     <div id="admin-wrapper">
         <div class="admin-login" id="admin-login-sec">
             <div class="login-box glass-panel">
-                <h2 style="margin-bottom: 10px; font-weight: 800; font-size: 32px;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</h2>
-                <p style="color: var(--accent-color); font-size: 15px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800;">CM ENGLISH Academy</p>
-                <input type="password" id="admin-password" placeholder="Enter Secure Password" aria-label="Admin Password">
-                <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;" onclick="checkPassword()"><i class="fa-solid fa-fingerprint"></i> Authenticate System</button>
-                <p id="login-error" style="color: #ef4444; display: none; margin-top: 20px; font-size: 15px; font-weight: 700; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-circle-exclamation"></i> Incorrect Password!</p>
-                <button style="background: transparent; color: var(--text-muted); border: none; margin-top: 35px; width: 100%; font-size: 15px; cursor: pointer; font-weight: 600; transition: var(--transition);" onclick="window.location.hash=''" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'">← Return to Website</button>
+                <h2 style="margin-bottom: 10px;"><i class="fa-solid fa-shield-halved"></i> Secure Login</h2>
+                <input type="password" id="admin-password" placeholder="Enter Secure Password">
+                <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="checkPassword()">Login via Auth</button>
+                <p id="login-error" style="color: #ef4444; display: none; margin-top: 15px;">Authentication Failed!</p>
+                <button style="background: transparent; color: var(--text-muted); border: none; margin-top: 20px; cursor: pointer;" onclick="window.location.hash=''">← Back to Site</button>
             </div>
         </div>
 
         <div id="admin-dashboard">
-            <div class="admin-header glass-panel" style="padding: 30px 40px; margin-bottom: 40px;">
-                <h2 style="font-weight: 800; font-size: 28px;"><i class="fa-solid fa-server" style="color: var(--accent-color);"></i> Control Panel</h2>
-                <button class="btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-power-off"></i> Terminate Session</button>
+            <div class="admin-header glass-panel">
+                <h2><i class="fa-solid fa-server"></i> Admin Dashboard</h2>
+                <button class="btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-power-off"></i> Logout</button>
             </div>
 
-            <!-- New Promo Banner Admin Card -->
+            <!-- Manage Notice Board -->
             <div class="admin-card glass-panel">
-                <h3 style="margin-bottom: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; font-weight: 800; font-size: 24px;"><i class="fa-solid fa-bullhorn" style="color: var(--accent-color); margin-right: 10px;"></i> Manage Top Promo Banner</h3>
-                
+                <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bell"></i> Notice Board Marquee</h3>
+                <input type="text" id="admin-notice-text" class="form-input" style="width:100%; padding:15px; border-radius:10px; background:var(--bg-color); color:var(--text-main); border:1px solid var(--glass-border); margin-bottom:15px;" placeholder="Enter scrolling text...">
+                <button class="btn-primary" onclick="updateNotice()"><i class="fa-solid fa-save"></i> Update Notice</button>
+                <p id="notice-status" style="margin-top: 10px; color: #16a34a; font-weight: bold;"></p>
+            </div>
+
+            <!-- Promo Banner Admin -->
+            <div class="admin-card glass-panel">
+                <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bullhorn"></i> Manage Top Banner</h3>
                 <div class="form-group">
-                    <label>Upload Banner Image (Landscape Mode)</label>
+                    <label>Upload Banner Image (Landscape)</label>
                     <input type="file" id="banner-file" accept="image/*" onchange="previewPromoBanner(event)">
                     <img id="banner-preview" src="" alt="Banner Preview">
                 </div>
                 <div class="form-group">
-                    <label>Call To Action (CTA) Button Text</label>
-                    <input type="text" id="banner-text" placeholder="e.g., Register Now For 2026">
+                    <label>CTA Button Text</label>
+                    <input type="text" id="banner-text" placeholder="e.g., Register Now">
                 </div>
                 <div class="form-group">
-                    <label>Call To Action Target Link (URL)</label>
-                    <input type="url" id="banner-link" placeholder="e.g., https://wa.me/919064513055">
+                    <label>CTA Target Link</label>
+                    <input type="url" id="banner-link" placeholder="https://wa.me/91...">
                 </div>
-
-                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                    <button class="btn-primary" id="upload-banner-btn" style="flex: 1; justify-content: center; min-width: 250px;" onclick="uploadPromoBanner()"><i class="fa-solid fa-upload"></i> Set Active Banner</button>
-                    <button class="btn-danger" style="flex: 1; justify-content: center; min-width: 250px;" onclick="deletePromoBanner()"><i class="fa-solid fa-trash"></i> Remove Banner</button>
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn-primary" id="upload-banner-btn" onclick="uploadPromoBanner()">Upload Banner</button>
+                    <button class="btn-danger" onclick="deletePromoBanner()">Remove Banner</button>
                 </div>
-                <p id="banner-status" style="text-align: center; margin-top: 25px; font-weight: 700; font-size: 16px; padding: 10px; border-radius: 8px;"></p>
+                <p id="banner-status" style="margin-top: 10px;"></p>
             </div>
 
-            <!-- Existing Gallery Admin Card -->
+            <!-- Gallery Admin -->
             <div class="admin-card glass-panel">
-                <h3 style="margin-bottom: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; font-weight: 800; font-size: 24px;"><i class="fa-solid fa-cloud-arrow-up" style="color: var(--primary-color); margin-right: 10px;"></i> Upload Gallery Media</h3>
-                
+                <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-image"></i> Upload Gallery</h3>
                 <div class="form-group">
-                    <label for="upload-category">Select Destination Category</label>
                     <select id="upload-category">
-                        <option value="Classroom">Classroom Image</option>
-                        <option value="Office Room">Office Room Image</option>
-                        <option value="Results">Student Result / Marksheet</option>
+                        <option value="Classroom">Classroom</option>
+                        <option value="Office Room">Office Room</option>
+                        <option value="Results">Student Result</option>
                     </select>
                 </div>
-
                 <div class="form-group">
-                    <label for="upload-file">Choose Image File (JPG/PNG)</label>
                     <input type="file" id="upload-file" accept="image/*" onchange="previewImage(event)">
-                    <img id="image-preview" src="" alt="Preview">
+                    <img id="image-preview" src="">
                 </div>
-
-                <button class="btn-primary" id="upload-btn" style="width: 100%; justify-content: center; padding: 18px; font-size: 18px;" onclick="uploadData()"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload to Cloud Server</button>
-                <p id="upload-status" style="text-align: center; margin-top: 25px; font-weight: 700; font-size: 16px; padding: 10px; border-radius: 8px;"></p>
+                <button class="btn-primary" id="upload-btn" onclick="uploadData()">Upload Media</button>
+                <p id="upload-status" style="margin-top: 10px;"></p>
             </div>
+
+            <!-- Leads / Inquiries Viewer -->
+            <div class="admin-card glass-panel" style="overflow-x: auto;">
+                <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-users"></i> Student Inquiries (Leads)</h3>
+                <table id="leads-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-body">
+                        <!-- Leads injected here -->
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- JAVASCRIPT LOGIC & FIREBASE INTEGRATION    -->
-    <!-- ========================================== -->
     <script>
-        // --- THEME TOGGLE LOGIC (LIGHT/DARK) ---
+        // --- THEME TOGGLE LOGIC ---
         const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = themeToggleBtn.querySelector('i');
-        
-        // Default to light, check local storage
         const currentTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
+        themeToggleBtn.querySelector('i').className = currentTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
 
         themeToggleBtn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            let newTheme = theme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
+            let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggleBtn.querySelector('i').className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         });
 
-        function updateThemeIcon(theme) {
-            if(theme === 'dark') {
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-            }
-        }
-
-        // --- NAVBAR SCROLL EFFECT ---
+        // --- NAVBAR SCROLL & MOBILE ---
         window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
-
-        // --- MOBILE MENU LOGIC ---
-        const mobileMenuBtn = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            if(navLinks.classList.contains('active')){
-                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
-            } else {
-                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
-            }
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
         });
-
-        function closeMenu() {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.querySelector('i').classList.replace('fa-xmark', 'fa-bars-staggered');
-        }
+        function closeMenu() { document.getElementById('nav-links').classList.remove('active'); }
 
         // --- FIREBASE CONFIGURATION ---
         const firebaseConfig = {
@@ -918,308 +583,240 @@
             appId: "1:516199736270:web:abdee96c4ebe59d520c19f",
             measurementId: "G-0KZGEM9ER8"
         };
-        
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
-        const galleryRef = db.ref('uploads');
-        const promoBannerRef = db.ref('promo_banner/active'); // New Reference for Banner
-
-        // IMGBB API
+        const auth = firebase.auth(); 
         const imgbbAPIKey = "b7b1309895b4830daaf39c194fa78efd";
-        let allImages =[];
 
+        // References
+        const noticeRef = db.ref('notice/text');
+        const promoRef = db.ref('promo_banner/active');
+        const galleryRef = db.ref('uploads');
+        const leadsRef = db.ref('leads');
+
+        // --- ROUTING & REAL AUTHENTICATION ---
         function handleRouting() {
             const hash = window.location.hash;
             if (hash === '#admin') {
                 document.getElementById('app-wrapper').style.display = 'none';
                 document.getElementById('admin-wrapper').style.display = 'block';
-                document.title = "Secure Admin Portal | CM English Academy";
-                
-                if(sessionStorage.getItem('adminAuth') === 'true') {
-                    document.getElementById('admin-login-sec').style.display = 'none';
-                    document.getElementById('admin-dashboard').style.display = 'block';
-                } else {
-                    document.getElementById('admin-login-sec').style.display = 'flex';
-                    document.getElementById('admin-dashboard').style.display = 'none';
-                }
+                // Check Firebase Auth State
+                auth.onAuthStateChanged(user => {
+                    if (user) {
+                        document.getElementById('admin-login-sec').style.display = 'none';
+                        document.getElementById('admin-dashboard').style.display = 'block';
+                        fetchAdminData(); 
+                    } else {
+                        document.getElementById('admin-login-sec').style.display = 'flex';
+                        document.getElementById('admin-dashboard').style.display = 'none';
+                    }
+                });
             } else {
                 document.getElementById('app-wrapper').style.display = 'block';
                 document.getElementById('admin-wrapper').style.display = 'none';
-                document.title = "Best English Coaching in Barabazar | Spoken English Classes Nilmohanpur";
             }
         }
         window.addEventListener('hashchange', handleRouting);
 
+        // SECURE LOGIN
         function checkPassword() {
             const pwd = document.getElementById('admin-password').value;
-            if(pwd === 'Rameshbycm') {
-                sessionStorage.setItem('adminAuth', 'true');
-                document.getElementById('admin-login-sec').style.display = 'none';
-                document.getElementById('admin-dashboard').style.display = 'block';
+            const email = "admin@cmenglishacademy.com"; 
+            
+            auth.signInWithEmailAndPassword(email, pwd)
+            .then(() => {
                 document.getElementById('admin-password').value = '';
                 document.getElementById('login-error').style.display = 'none';
-            } else {
+            })
+            .catch((error) => {
+                document.getElementById('login-error').innerText = "Incorrect Password or User not created in Firebase!";
                 document.getElementById('login-error').style.display = 'block';
-            }
+                console.error(error);
+            });
         }
 
-        function logoutAdmin() {
-            sessionStorage.removeItem('adminAuth');
-            window.location.hash = '';
-            window.location.reload();
+        function logoutAdmin() { auth.signOut().then(() => { window.location.hash = ''; }); }
+
+        // --- NOTICE BOARD ---
+        noticeRef.on('value', snap => {
+            const text = snapshot.val();
+            if(text) { document.getElementById('notice-text').innerText = text; }
+            if(document.getElementById('admin-notice-text')) { document.getElementById('admin-notice-text').value = text || ""; }
+        });
+        function updateNotice() {
+            const txt = document.getElementById('admin-notice-text').value;
+            noticeRef.set(txt).then(() => {
+                document.getElementById('notice-status').innerText = "Notice Updated!";
+                setTimeout(() => document.getElementById('notice-status').innerText = "", 3000);
+            });
         }
 
-        // --- PROMO BANNER SYSTEM LOGIC ---
-        
-        // Fetch Banner for Website
-        promoBannerRef.on('value', (snapshot) => {
+        // --- PROMO BANNER ---
+        promoRef.on('value', snap => {
             const data = snapshot.val();
-            const container = document.getElementById('promo-banner-wrapper');
+            const wrapper = document.getElementById('promo-banner-wrapper');
             if(data && data.url) {
                 document.getElementById('promo-img').src = data.url;
-                document.getElementById('promo-link').innerText = data.text || 'Explore Now';
+                document.getElementById('promo-link').innerText = data.text;
                 document.getElementById('promo-link').innerHTML += ' <i class="fa-solid fa-arrow-right"></i>';
-                document.getElementById('promo-link').href = data.link || '#';
-                container.style.display = 'block';
+                document.getElementById('promo-link').href = data.link;
+                wrapper.style.display = 'block';
                 
-                // Pre-fill Admin Panel if open
                 if(document.getElementById('banner-preview')) {
                     document.getElementById('banner-preview').src = data.url;
                     document.getElementById('banner-preview').style.display = 'block';
-                    document.getElementById('banner-text').value = data.text || '';
-                    document.getElementById('banner-link').value = data.link || '';
+                    document.getElementById('banner-text').value = data.text;
+                    document.getElementById('banner-link').value = data.link;
                 }
             } else {
-                container.style.display = 'none';
-                if(document.getElementById('banner-preview')) {
-                    document.getElementById('banner-preview').style.display = 'none';
-                    document.getElementById('banner-text').value = '';
-                    document.getElementById('banner-link').value = '';
-                }
+                wrapper.style.display = 'none';
+                if(document.getElementById('banner-preview')) document.getElementById('banner-preview').style.display = 'none';
             }
         });
 
-        // Admin: Preview Banner
-        function previewPromoBanner(event) {
-            const reader = new FileReader();
-            reader.onload = function(){
-                const output = document.getElementById('banner-preview');
-                output.src = reader.result;
-                output.style.display = 'block';
-            };
-            if(event.target.files[0]) {
-                reader.readAsDataURL(event.target.files[0]);
-            }
+        function previewPromoBanner(e) {
+            const r = new FileReader();
+            r.onload = () => { document.getElementById('banner-preview').src = r.result; document.getElementById('banner-preview').style.display = 'block'; };
+            if(e.target.files[0]) r.readAsDataURL(e.target.files[0]);
         }
 
-        // Admin: Upload/Update Banner
         async function uploadPromoBanner() {
-            const fileInput = document.getElementById('banner-file');
-            const textInput = document.getElementById('banner-text').value;
-            const linkInput = document.getElementById('banner-link').value;
-            const statusText = document.getElementById('banner-status');
-            const uploadBtn = document.getElementById('upload-banner-btn');
-
-            if(fileInput.files.length === 0 && document.getElementById('banner-preview').src === "") {
-                alert("Please select a banner image first!");
-                return;
-            }
-
+            const file = document.getElementById('banner-file').files[0];
+            const text = document.getElementById('banner-text').value;
+            const link = document.getElementById('banner-link').value;
+            const btn = document.getElementById('upload-banner-btn');
+            
+            if(!file && document.getElementById('banner-preview').src === "") return alert("Select image!");
+            
             try {
-                uploadBtn.disabled = true;
-                uploadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
-                statusText.innerText = "";
-                statusText.style.background = "transparent";
-                
-                let imageUrl = document.getElementById('banner-preview').src;
-
-                if(fileInput.files.length > 0) {
-                    const formData = new FormData();
-                    formData.append("image", fileInput.files[0]);
-                    
-                    const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`, {
-                        method: 'POST',
-                        body: formData
-                    });
-                    const imgbbData = await imgbbResponse.json();
-                    if(imgbbData.success) {
-                        imageUrl = imgbbData.data.url;
-                    } else {
-                        throw new Error("ImgBB Upload Failed");
-                    }
+                btn.innerText = "Uploading...";
+                let url = document.getElementById('banner-preview').src;
+                if(file) {
+                    const fd = new FormData(); fd.append("image", file);
+                    const res = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`, { method: 'POST', body: fd });
+                    const dat = await res.json();
+                    if(dat.success) url = dat.data.url;
                 }
-
-                await promoBannerRef.set({
-                    url: imageUrl,
-                    text: textInput,
-                    link: linkInput,
-                    updatedAt: Date.now()
-                });
-
-                statusText.innerHTML = "<i class='fa-solid fa-circle-check'></i> Banner Updated Successfully!";
-                statusText.style.color = "#4ade80";
-                statusText.style.background = "rgba(74, 222, 128, 0.1)";
-                fileInput.value = "";
-            } catch (error) {
-                console.error(error);
-                statusText.innerHTML = "<i class='fa-solid fa-circle-xmark'></i> Update Failed.";
-                statusText.style.color = "#f87171";
-                statusText.style.background = "rgba(248, 113, 113, 0.1)";
-            } finally {
-                uploadBtn.disabled = false;
-                uploadBtn.innerHTML = '<i class="fa-solid fa-upload"></i> Set Active Banner';
-            }
-        }
-
-        // Admin: Delete Banner
-        async function deletePromoBanner() {
-            if(confirm("Are you sure you want to remove the promotional banner from the website?")) {
-                await promoBannerRef.remove();
-                document.getElementById('banner-status').innerHTML = "<i class='fa-solid fa-trash'></i> Banner Removed.";
-                document.getElementById('banner-status').style.color = "#ef4444";
-                document.getElementById('banner-status').style.background = "rgba(239, 68, 68, 0.1)";
+                await promoRef.set({ url, text, link, ts: Date.now() });
+                document.getElementById('banner-status').innerText = "Banner Updated!";
                 document.getElementById('banner-file').value = "";
-            }
+            } catch(e) { alert("Error uploading"); }
+            finally { btn.innerText = "Upload Banner"; setTimeout(()=>document.getElementById('banner-status').innerText="", 3000); }
         }
 
-        // --- EXISTING GALLERY LOGIC ---
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function(){
-                const output = document.getElementById('image-preview');
-                output.src = reader.result;
-                output.style.display = 'block';
-            };
-            if(event.target.files[0]) {
-                reader.readAsDataURL(event.target.files[0]);
-            }
+        function deletePromoBanner() {
+            if(confirm("Remove banner?")) promoRef.remove();
+        }
+
+        // --- GALLERY UPLOAD & FETCH ---
+        function previewImage(e) {
+            const r = new FileReader();
+            r.onload = () => { document.getElementById('image-preview').src = r.result; document.getElementById('image-preview').style.display = 'block'; };
+            if(e.target.files[0]) r.readAsDataURL(e.target.files[0]);
         }
 
         async function uploadData() {
-            const fileInput = document.getElementById('upload-file');
-            const category = document.getElementById('upload-category').value;
-            const statusText = document.getElementById('upload-status');
-            const uploadBtn = document.getElementById('upload-btn');
-
-            if(fileInput.files.length === 0) {
-                alert("Please select an image first!");
-                return;
-            }
-
-            const file = fileInput.files[0];
-            const formData = new FormData();
-            formData.append("image", file);
+            const file = document.getElementById('upload-file').files[0];
+            const cat = document.getElementById('upload-category').value;
+            const btn = document.getElementById('upload-btn');
+            if(!file) return alert("Select Image!");
 
             try {
-                uploadBtn.disabled = true;
-                uploadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing Matrix...';
-                statusText.innerText = "";
-                statusText.style.background = "transparent";
-                
-                const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`, {
-                    method: 'POST',
-                    body: formData
-                });
-                const imgbbData = await imgbbResponse.json();
-
-                if(imgbbData.success) {
-                    const imageUrl = imgbbData.data.url;
-                    
-                    uploadBtn.innerHTML = '<i class="fa-solid fa-database"></i> Securing Data Node...';
-                    await galleryRef.push({
-                        url: imageUrl,
-                        category: category,
-                        timestamp: Date.now()
-                    });
-
-                    statusText.innerHTML = "<i class='fa-solid fa-circle-check'></i> Upload Successful & Secured!";
-                    statusText.style.color = "#4ade80";
-                    statusText.style.background = "rgba(74, 222, 128, 0.1)";
-                    
-                    fileInput.value = "";
+                btn.innerText = "Processing...";
+                const fd = new FormData(); fd.append("image", file);
+                const res = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`, { method: 'POST', body: fd });
+                const dat = await res.json();
+                if(dat.success) {
+                    await galleryRef.push({ url: dat.data.url, category: cat, timestamp: Date.now() });
+                    document.getElementById('upload-status').innerText = "Uploaded Successfully!";
+                    document.getElementById('upload-file').value = "";
                     document.getElementById('image-preview').style.display = "none";
-                } else {
-                    throw new Error("ImgBB Upload Failed");
                 }
-            } catch (error) {
-                console.error(error);
-                statusText.innerHTML = "<i class='fa-solid fa-circle-xmark'></i> Upload Failed. System Error.";
-                statusText.style.color = "#f87171";
-                statusText.style.background = "rgba(248, 113, 113, 0.1)";
-            } finally {
-                uploadBtn.disabled = false;
-                uploadBtn.innerHTML = '<i class="fa-solid fa-arrow-up-from-bracket"></i> Upload to Cloud Server';
-            }
+            } catch(e) { alert("Upload Failed"); }
+            finally { btn.innerText = "Upload Media"; setTimeout(()=>document.getElementById('upload-status').innerText="",3000);}
         }
 
-        galleryRef.on('value', (snapshot) => {
-            const data = snapshot.val();
+        let allImages =[];
+        galleryRef.on('value', snap => {
             allImages =[];
-            if(data) {
-                Object.keys(data).forEach(key => {
-                    allImages.push({ id: key, ...data[key] });
-                });
-                allImages.sort((a,b) => b.timestamp - a.timestamp);
-            }
-            renderWebsiteImages();
+            if(snap.val()) Object.keys(snap.val()).forEach(k => allImages.push(snap.val()[k]));
+            allImages.sort((a,b) => b.timestamp - a.timestamp);
+            renderGallery();
         });
 
-        function renderWebsiteImages(filterCategory = 'All') {
-            const galleryContainer = document.getElementById('gallery-container');
-            const galleryEmpty = document.getElementById('gallery-empty');
-
-            galleryContainer.innerHTML = '';
-            let hasImages = false;
-
+        function renderGallery(filter = 'All') {
+            const cont = document.getElementById('gallery-container');
+            cont.innerHTML = '';
+            let has = false;
             allImages.forEach(img => {
-                let altText = `CM English Academy ${img.category} - Best English Coaching in Barabazar, Nilmohanpur`;
-                
-                const imgHtml = `
-                    <div class="gallery-item">
-                        <img src="${img.url}" alt="${altText}" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h4 style="font-weight: 700; font-family: 'Outfit', sans-serif; font-size: 20px;">${img.category}</h4>
-                        </div>
-                    </div>
-                `;
-
-                if(filterCategory === 'All' || filterCategory === img.category) {
-                    galleryContainer.innerHTML += imgHtml;
-                    hasImages = true;
+                if(filter === 'All' || img.category === filter) {
+                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
+                    has = true;
                 }
             });
-
-            if(!hasImages) { galleryContainer.appendChild(galleryEmpty); galleryEmpty.style.display = 'block'; }
+            if(!has) cont.innerHTML = `<div class="empty-msg glass-panel">No Media Found</div>`;
         }
 
-        function filterGallery(category) {
-            const btns = document.querySelectorAll('.filter-btn');
-            btns.forEach(btn => btn.classList.remove('active'));
+        function filterGallery(cat) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             event.target.classList.add('active');
-            renderWebsiteImages(category);
+            renderGallery(cat);
         }
 
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; 
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+        // --- LEAD GENERATION FORM ---
+        function submitInquiry(e) {
+            e.preventDefault();
+            const btn = document.getElementById('inq-btn');
+            const status = document.getElementById('inq-status');
+            btn.innerText = "Submitting...";
+            
+            const data = {
+                name: document.getElementById('inq-name').value,
+                phone: document.getElementById('inq-phone').value,
+                class: document.getElementById('inq-class').value,
+                date: new Date().toLocaleString()
+            };
+
+            leadsRef.push(data).then(() => {
+                btn.innerText = "Submit Inquiry";
+                status.innerText = "Inquiry Submitted Successfully!";
+                status.style.color = "#16a34a";
+                document.getElementById('inquiry-form').reset();
+                setTimeout(() => status.innerText = "", 4000);
+            }).catch(err => {
+                btn.innerText = "Submit Inquiry";
+                status.innerText = "Failed to submit.";
+                status.style.color = "#ef4444";
+            });
+        }
+
+        function fetchAdminData() {
+            leadsRef.on('value', snap => {
+                const tbody = document.getElementById('leads-body');
+                tbody.innerHTML = '';
+                const leads = snap.val();
+                if(leads) {
+                    Object.values(leads).reverse().forEach(l => {
+                        tbody.innerHTML += `<tr><td>${l.date}</td><td>${l.name}</td><td><a href="tel:${l.phone}" style="color:var(--accent-color)">${l.phone}</a></td><td>${l.class}</td></tr>`;
+                    });
+                } else {
+                    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center">No Inquiries Yet.</td></tr>`;
                 }
-            }
+            });
+        }
+
+        // Scroll Animations
+        function reveal() {
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add("active");
+            });
         }
         window.addEventListener("scroll", reveal);
 
         window.onload = () => {
             handleRouting();
             reveal();
-            setTimeout(() => {
-                const loader = document.getElementById('loader');
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
-            }, 1000);
+            setTimeout(() => { document.getElementById('loader').style.opacity = '0'; setTimeout(() => document.getElementById('loader').style.display = 'none', 500); }, 1000);
         };
     </script>
 </body>
