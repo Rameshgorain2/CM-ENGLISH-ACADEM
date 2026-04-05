@@ -4,56 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 
-    =======================================================================
-    🚀 SECURITY & FIREBASE INSTRUCTIONS FOR ADMIN (PLEASE READ) 🚀
-    =======================================================================
-    1. Because your database is now highly secure (".write": "auth != null"),
-       you MUST enable "Authentication" in your Firebase Console.
-    2. Go to Firebase Console -> Authentication -> Sign-in method -> Enable "Email/Password".
-    3. Go to "Users" tab in Authentication -> Click "Add User".
-    4. Enter Email: admin@cmenglishacademy.com
-    5. Enter Password: Rameshbycm
-    6. Go to Firebase Realtime Database -> Rules and paste this EXACT code:
-    
-    {
-      "rules": {
-        ".read": "true",
-        "leads": {
-          ".read": "auth != null",
-          ".write": "true"
-        },
-        "uploads": { ".write": "auth != null" },
-        "promo_banner": { ".write": "auth != null" },
-        "notice": { ".write": "auth != null" }
-      }
-    }
-    
-    Now your admin panel is 100% Hacker-Proof and Un-bypassable!
-    =======================================================================
-    -->
-
     <!-- ========================================== -->
-    <!-- FAVICON (Just place favicon.png in same folder)-->
+    <!-- FAVICON -->
     <!-- ========================================== -->
     <link rel="icon" href="favicon.png" type="image/png">
 
+    <!-- ========================================== -->
+    <!-- ADVANCED ON-PAGE SEO & META TAGS           -->
+    <!-- ========================================== -->
     <title>Best English Coaching in Barabazar | Spoken English Classes Nilmohanpur</title>
     <meta name="description" content="Searching for the Best English Coaching in Barabazar? CM English Academy offers top-tier English tuition, including Spoken English Classes in Nilmohanpur. Enroll for 2026!">
     <meta name="keywords" content="Best English Coaching in Barabazar, Spoken English Classes Nilmohanpur, English Tuition Near Me, CM English Academy, Barabazar English tuition, top english classes near me, english medium tuition nilmohanpur, class 6 to 12 english coaching">
     <meta name="author" content="CM English Academy">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="language" content="English">
-    <meta name="geo.region" content="IN-WB">
-    <meta name="geo.placename" content="Barabazar, Nilmohanpur, Purulia">
     
     <link rel="canonical" href="https://cmenglishacademy.com/">
     
     <meta property="og:title" content="Best English Coaching in Barabazar | CM English Academy">
     <meta property="og:description" content="Expert English education & Spoken English Classes in Nilmohanpur, Barabazar. Two years FREE for Class 6 & 7.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://cmenglishacademy.com/">
-    <meta property="og:type" content="website">
 
     <script type="application/ld+json">[
       {
@@ -73,17 +42,16 @@
           "postalCode": "723127",
           "addressCountry": "IN"
         },
-        "areaServed":["Barabazar", "Nilmohanpur", "Purulia"],
-        "sameAs":["https://wa.me/919064513055"]
+        "areaServed":["Barabazar", "Nilmohanpur", "Purulia"]
       }
     ]</script>
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Firebase SDKs (App, Auth, Database) -->
+    <!-- Firebase SDK (Only App & Database needed for simple auth) -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
     <style>
@@ -97,8 +65,7 @@
             --hero-gradient: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.95));
             --body-gradient: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.05), transparent 25%);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        [data-theme="dark"] {
+        }[data-theme="dark"] {
             /* DARK MODE */
             --primary-color: #6366f1; --secondary-color: #8b5cf6; --accent-color: #06b6d4; 
             --text-main: #f8fafc; --text-heading: #ffffff; --text-muted: #cbd5e1; --bg-color: #020617;
@@ -145,7 +112,8 @@
         #promo-banner-wrapper { display: none; padding: 140px 5% 0px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 10; }
         .promo-banner { position: relative; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--glass-shadow); display: flex; align-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); min-height: 150px; }
         .promo-banner img { width: 100%; max-height: 400px; object-fit: cover; display: block; }
-        .promo-banner::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 50%; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8)); pointer-events: none; }[data-theme="light"] .promo-banner::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9)); }
+        .promo-banner::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 50%; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8)); pointer-events: none; }
+        [data-theme="light"] .promo-banner::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9)); }
         .promo-cta-wrapper { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); z-index: 2; }
         .btn-promo-cta { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; padding: 15px 40px; border-radius: 30px; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.3); transition: var(--transition); white-space: nowrap; font-size: 18px; display: flex; align-items: center; gap: 10px; font-family: 'Outfit', sans-serif; text-transform: uppercase; }
         .btn-promo-cta:hover { transform: scale(1.05); }
@@ -190,7 +158,8 @@
         .card h3 { font-size: 26px; font-weight: 800; margin-bottom: 15px; }
         .card .badge { display: inline-block; padding: 8px 18px; border-radius: 30px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .badge.free { background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); }
-        .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }[data-theme="dark"] .badge.free { color: #4ade80; }
+        .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }
+        [data-theme="dark"] .badge.free { color: #4ade80; }
         [data-theme="dark"] .badge.paid { color: #7dd3fc; }
         .card p { margin-top: 20px; color: var(--text-muted); font-size: 16px; }
 
@@ -466,9 +435,10 @@
         <div class="admin-login" id="admin-login-sec">
             <div class="login-box glass-panel">
                 <h2 style="margin-bottom: 10px;"><i class="fa-solid fa-shield-halved"></i> Secure Login</h2>
-                <input type="password" id="admin-password" placeholder="Enter Secure Password">
-                <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="checkPassword()">Login via Auth</button>
-                <p id="login-error" style="color: #ef4444; display: none; margin-top: 15px;">Authentication Failed!</p>
+                <!-- DIRECT SIMPLE LOGIN -->
+                <input type="password" id="admin-password" placeholder="Enter Admin Password">
+                <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="checkPassword()">Login</button>
+                <p id="login-error" style="color: #ef4444; display: none; margin-top: 15px;">Incorrect Password!</p>
                 <button style="background: transparent; color: var(--text-muted); border: none; margin-top: 20px; cursor: pointer;" onclick="window.location.hash=''">← Back to Site</button>
             </div>
         </div>
@@ -585,7 +555,6 @@
         };
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
-        const auth = firebase.auth(); 
         const imgbbAPIKey = "b7b1309895b4830daaf39c194fa78efd";
 
         // References
@@ -594,23 +563,22 @@
         const galleryRef = db.ref('uploads');
         const leadsRef = db.ref('leads');
 
-        // --- ROUTING & REAL AUTHENTICATION ---
+        // --- ROUTING & SIMPLE AUTHENTICATION ---
         function handleRouting() {
             const hash = window.location.hash;
             if (hash === '#admin') {
                 document.getElementById('app-wrapper').style.display = 'none';
                 document.getElementById('admin-wrapper').style.display = 'block';
-                // Check Firebase Auth State
-                auth.onAuthStateChanged(user => {
-                    if (user) {
-                        document.getElementById('admin-login-sec').style.display = 'none';
-                        document.getElementById('admin-dashboard').style.display = 'block';
-                        fetchAdminData(); 
-                    } else {
-                        document.getElementById('admin-login-sec').style.display = 'flex';
-                        document.getElementById('admin-dashboard').style.display = 'none';
-                    }
-                });
+                
+                // Using simple sessionStorage for easy access
+                if(sessionStorage.getItem('adminAuth') === 'true') {
+                    document.getElementById('admin-login-sec').style.display = 'none';
+                    document.getElementById('admin-dashboard').style.display = 'block';
+                    fetchAdminData(); 
+                } else {
+                    document.getElementById('admin-login-sec').style.display = 'flex';
+                    document.getElementById('admin-dashboard').style.display = 'none';
+                }
             } else {
                 document.getElementById('app-wrapper').style.display = 'block';
                 document.getElementById('admin-wrapper').style.display = 'none';
@@ -618,24 +586,27 @@
         }
         window.addEventListener('hashchange', handleRouting);
 
-        // SECURE LOGIN
+        // SIMPLE LOGIN LOGIC
         function checkPassword() {
             const pwd = document.getElementById('admin-password').value;
-            const email = "admin@cmenglishacademy.com"; 
-            
-            auth.signInWithEmailAndPassword(email, pwd)
-            .then(() => {
+            if(pwd === 'Rameshbycm') {
+                sessionStorage.setItem('adminAuth', 'true');
                 document.getElementById('admin-password').value = '';
                 document.getElementById('login-error').style.display = 'none';
-            })
-            .catch((error) => {
-                document.getElementById('login-error').innerText = "Incorrect Password or User not created in Firebase!";
+                document.getElementById('admin-login-sec').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+                fetchAdminData();
+            } else {
+                document.getElementById('login-error').innerText = "Incorrect Password!";
                 document.getElementById('login-error').style.display = 'block';
-                console.error(error);
-            });
+            }
         }
 
-        function logoutAdmin() { auth.signOut().then(() => { window.location.hash = ''; }); }
+        function logoutAdmin() {
+            sessionStorage.removeItem('adminAuth');
+            window.location.hash = '';
+            window.location.reload();
+        }
 
         // --- NOTICE BOARD ---
         noticeRef.on('value', snap => {
