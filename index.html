@@ -12,7 +12,7 @@
     <!-- ========================================== -->
     <!-- ADVANCED ON-PAGE SEO & META TAGS           -->
     <!-- ========================================== -->
-    <title>Best English Coaching in Barabazar | Spoken English Classes Nilmohanpur</title>
+    <title>Best English Coaching in Barabazar | CM English Academy Nilmohanpur</title>
     <meta name="description" content="Searching for the Best English Coaching in Barabazar? CM English Academy offers top-tier English tuition, including Spoken English Classes in Nilmohanpur. Enroll for 2026!">
     <meta name="keywords" content="Best English Coaching in Barabazar, Spoken English Classes Nilmohanpur, English Tuition Near Me, CM English Academy, Barabazar English tuition, top english classes near me, english medium tuition nilmohanpur, class 6 to 12 english coaching">
     <meta name="author" content="CM English Academy">
@@ -65,7 +65,8 @@
             --hero-gradient: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.95));
             --body-gradient: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.05), transparent 25%);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }[data-theme="dark"] {
+        }
+        [data-theme="dark"] {
             /* DARK MODE */
             --primary-color: #6366f1; --secondary-color: #8b5cf6; --accent-color: #06b6d4; 
             --text-main: #f8fafc; --text-heading: #ffffff; --text-muted: #cbd5e1; --bg-color: #020617;
@@ -83,6 +84,7 @@
         .glass-panel { background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); border-top: 1px solid var(--glass-border-light); border-left: 1px solid var(--glass-border-light); box-shadow: var(--glass-shadow); border-radius: 20px; transition: var(--transition); }
         .text-gradient { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
 
+        /* Loader */
         #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.5s; }
         .spinner { border: 4px solid var(--glass-border); border-top: 4px solid var(--primary-color); border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; box-shadow: 0 0 20px rgba(99,102,241,0.3); }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -95,7 +97,7 @@
         /* Navbar */
         nav { position: fixed; top: 37px; width: 100%; z-index: 1000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
         nav.scrolled { padding: 12px 5%; background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); top:0;}
-        .logo { font-size: clamp(20px, 4vw, 26px); font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 10px; letter-spacing: -0.5px;}
+        .logo { font-size: clamp(18px, 3.5vw, 24px); font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px;}
         .logo i { color: var(--accent-color); text-shadow: 0 0 10px rgba(6,182,212,0.3); }
         
         .nav-links { display: flex; gap: 30px; align-items: center;}
@@ -112,11 +114,33 @@
         #promo-banner-wrapper { display: none; padding: 140px 5% 0px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 10; }
         .promo-banner { position: relative; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--glass-shadow); display: flex; align-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); min-height: 150px; }
         .promo-banner img { width: 100%; max-height: 400px; object-fit: cover; display: block; }
-        .promo-banner::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 50%; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8)); pointer-events: none; }
-        [data-theme="light"] .promo-banner::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9)); }
+        .promo-banner::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 50%; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.8)); pointer-events: none; }[data-theme="light"] .promo-banner::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9)); }
         .promo-cta-wrapper { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); z-index: 2; }
         .btn-promo-cta { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; padding: 15px 40px; border-radius: 30px; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.3); transition: var(--transition); white-space: nowrap; font-size: 18px; display: flex; align-items: center; gap: 10px; font-family: 'Outfit', sans-serif; text-transform: uppercase; }
         .btn-promo-cta:hover { transform: scale(1.05); }
+
+        /* Auto Popup Lead Capture */
+        .popup-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+            z-index: 10005; display: none; justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .popup-overlay.show { display: flex; opacity: 1; }
+        .popup-content {
+            width: 90%; max-width: 420px; padding: 40px 30px; text-align: center;
+            position: relative; transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--bg-color); border: 1px solid var(--glass-border-light);
+            border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .popup-overlay.show .popup-content { transform: scale(1); }
+        .close-popup {
+            position: absolute; top: 15px; right: 15px; background: transparent; border: none;
+            color: var(--text-heading); font-size: 24px; cursor: pointer; transition: 0.3s;
+        }
+        .close-popup:hover { color: var(--primary-color); transform: rotate(90deg); }
+        .popup-content h3 { font-size: 26px; margin-bottom: 10px; color: var(--text-heading); }
+        .popup-content p { color: var(--text-muted); margin-bottom: 25px; font-size: 15px; }
 
         /* Sections */
         section { padding: 100px 5% 60px; min-height: 100vh; position: relative; }
@@ -133,16 +157,17 @@
         .btn-primary { padding: 18px 45px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; gap: 12px; }
         .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); }
 
-        /* Stats */
+        /* Animated Stats */
         .stats-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: -50px; position: relative; z-index: 10;}
         .stat-box { padding: 30px 40px; text-align: center; min-width: 220px; transition: var(--transition); }
         .stat-box:hover { transform: translateY(-10px); }
-        .stat-box h3 { font-size: 38px; color: var(--text-heading); font-weight: 900; }
-        .stat-box p { color: var(--accent-color); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; }
+        .stat-box h3 { font-size: 42px; color: var(--text-heading); font-weight: 900; display: inline-block;}
+        .stat-box span.suffix { font-size: 42px; color: var(--text-heading); font-weight: 900; }
+        .stat-box p { color: var(--accent-color); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px; }
 
         /* Faculty Section */
         .faculty-card { max-width: 800px; margin: 0 auto 50px; padding: 40px; display: flex; align-items: center; gap: 40px; }
-        .faculty-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--glass-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: var(--bg-color); display:flex; justify-content:center; align-items:center; color: var(--primary-color); overflow: hidden;}
+        .faculty-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--glass-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: var(--bg-color); display:flex; justify-content:center; align-items:center; color: var(--primary-color); overflow: hidden; flex-shrink: 0;}
         .faculty-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
         .faculty-info h3 { font-size: 28px; margin-bottom: 5px; }
         .faculty-info p.role { color: var(--accent-color); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 15px; letter-spacing: 1px;}
@@ -159,8 +184,7 @@
         .card .badge { display: inline-block; padding: 8px 18px; border-radius: 30px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .badge.free { background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.3); }
         .badge.paid { background: rgba(56, 189, 248, 0.15); color: #0284c7; border: 1px solid rgba(56, 189, 248, 0.3); }
-        [data-theme="dark"] .badge.free { color: #4ade80; }
-        [data-theme="dark"] .badge.paid { color: #7dd3fc; }
+        [data-theme="dark"] .badge.free { color: #4ade80; }[data-theme="dark"] .badge.paid { color: #7dd3fc; }
         .card p { margin-top: 20px; color: var(--text-muted); font-size: 16px; }
 
         /* Gallery */
@@ -182,17 +206,6 @@
         .testi-card i { color: #fbbf24; font-size: 24px; margin-bottom: 15px;}
         .testi-text { font-size: 16px; color: var(--text-muted); font-style: italic; margin-bottom: 20px; line-height: 1.8;}
         .testi-name { font-weight: 800; color: var(--text-heading); font-size: 18px;}
-
-        /* FAQ Section */
-        .faq-container { max-width: 900px; margin: 50px auto 0; }
-        .faq-item { margin-bottom: 20px; transition: var(--transition); cursor: pointer; padding: 30px;}
-        .faq-item:hover { background: var(--glass-border-light); }
-        .faq-question { font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: var(--text-heading); display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { font-size: 16px; color: var(--text-muted); margin-top: 20px; display: none; }
-        .faq-question i { color: var(--accent-color); transition: transform 0.3s; background: rgba(6,182,212,0.1); padding: 8px; border-radius: 50%;}
-        .faq-item.active { border-color: var(--primary-color); }
-        .faq-item.active .faq-answer { display: block; animation: slideDown 0.4s ease; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); background: var(--primary-color); color: #fff; }
 
         /* Contact & Lead Form */
         .contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;}
@@ -237,6 +250,7 @@
             #promo-banner-wrapper { padding-top: 100px; }
             .hero-title { font-size: clamp(36px, 10vw, 50px); }
             .faculty-card { flex-direction: column; text-align: center; }
+            .contact-info-card, .lead-form-card { padding: 30px 20px; }
         }
 
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
@@ -262,10 +276,25 @@
         <p style="color: var(--accent-color); font-weight: 700; margin-top: 8px; text-transform: uppercase; font-size: 13px; letter-spacing: 3px;">Academy</p>
     </div>
 
+    <!-- Auto Popup Lead Capture -->
+    <div id="lead-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="text-gradient">Unlock Your Free Demo!</h3>
+            <p>Enter your details below to get 2026 batch info and a free demo session at CM English Academy.</p>
+            <form id="popup-form" onsubmit="submitPopupInquiry(event)">
+                <input type="text" id="pop-name" class="form-input" placeholder="Student Name" required>
+                <input type="tel" id="pop-phone" class="form-input" placeholder="Mobile Number" required>
+                <button type="submit" id="pop-btn" class="btn-primary" style="width:100%; justify-content:center;">Claim Free Demo</button>
+                <p id="pop-status" style="margin-top:10px; font-weight:bold;"></p>
+            </form>
+        </div>
+    </div>
+
     <main id="app-wrapper">
         <header>
             <nav id="navbar">
-                <a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> CM ENGLISH</a>
+                <a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> CM English Academy</a>
                 <div class="nav-links" id="nav-links">
                     <a href="#home" onclick="closeMenu()">Home</a>
                     <a href="#faculty" onclick="closeMenu()">Faculty</a>
@@ -301,11 +330,20 @@
             </div>
         </section>
 
-        <!-- Stats -->
-        <div class="stats-container reveal">
-            <div class="stat-box glass-panel"><h3>10+</h3><p>Years Legacy</p></div>
-            <div class="stat-box glass-panel"><h3>100%</h3><p>Board Success</p></div>
-            <div class="stat-box glass-panel"><h3>Free</h3><p>Class 6 & 7</p></div>
+        <!-- Stats (Animated Counters) -->
+        <div class="stats-container reveal" id="stats-section">
+            <div class="stat-box glass-panel">
+                <h3 class="counter" data-target="10">0</h3><span class="suffix">+</span>
+                <p>Years Legacy</p>
+            </div>
+            <div class="stat-box glass-panel">
+                <h3 class="counter" data-target="100">0</h3><span class="suffix">%</span>
+                <p>Board Success</p>
+            </div>
+            <div class="stat-box glass-panel">
+                <h3 style="font-size: 42px;">Free</h3>
+                <p>Class 6 & 7</p>
+            </div>
         </div>
 
         <!-- Faculty Section -->
@@ -318,7 +356,7 @@
                 <div class="faculty-info">
                     <h3>Mr. C.M. Sir</h3>
                     <p class="role">Founder & Lead Educator</p>
-                    <p class="desc">With over a decade of teaching experience, CM Sir has revolutionized English education in Barabazar. His unique methodology focuses on building strong grammatical foundations and fluent speaking skills, ensuring every student achieves their highest potential.</p>
+                    <p class="desc">With over a decade of teaching experience, CM Sir has revolutionized English education in Barabazar. His unique methodology focuses on building strong grammatical foundations and fluent speaking skills at CM English Academy, ensuring every student achieves their highest potential.</p>
                 </div>
             </div>
         </section>
@@ -388,7 +426,7 @@
                 <!-- Info -->
                 <div class="contact-info-card glass-panel">
                     <h2>Admissions Open</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">Secure your child's future today.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Secure your child's future today at CM English Academy.</p>
                     <a href="tel:+919064513055" class="phone-number">+91 90645 13055</a>
                     <a href="https://wa.me/919064513055" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
                     <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-location-dot"></i> Nilmohanpur, Barabazar, Purulia</p>
@@ -435,7 +473,6 @@
         <div class="admin-login" id="admin-login-sec">
             <div class="login-box glass-panel">
                 <h2 style="margin-bottom: 10px;"><i class="fa-solid fa-shield-halved"></i> Secure Login</h2>
-                <!-- DIRECT SIMPLE LOGIN -->
                 <input type="password" id="admin-password" placeholder="Enter Admin Password">
                 <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="checkPassword()">Login</button>
                 <p id="login-error" style="color: #ef4444; display: none; margin-top: 15px;">Incorrect Password!</p>
@@ -484,14 +521,14 @@
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-image"></i> Upload Gallery</h3>
                 <div class="form-group">
-                    <select id="upload-category">
+                    <select id="upload-category" class="form-input">
                         <option value="Classroom">Classroom</option>
                         <option value="Office Room">Office Room</option>
                         <option value="Results">Student Result</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="file" id="upload-file" accept="image/*" onchange="previewImage(event)">
+                    <input type="file" id="upload-file" class="form-input" accept="image/*" onchange="previewImage(event)">
                     <img id="image-preview" src="">
                 </div>
                 <button class="btn-primary" id="upload-btn" onclick="uploadData()">Upload Media</button>
@@ -542,6 +579,47 @@
         });
         function closeMenu() { document.getElementById('nav-links').classList.remove('active'); }
 
+        // --- POPUP LEAD CAPTURE LOGIC ---
+        setTimeout(() => {
+            if(!sessionStorage.getItem('cmAcademyPopupShown')) {
+                const popup = document.getElementById('lead-popup');
+                popup.style.display = 'flex';
+                setTimeout(() => popup.classList.add('show'), 10);
+                sessionStorage.setItem('cmAcademyPopupShown', 'true');
+            }
+        }, 12000); // Popup appears after 12 seconds
+
+        function closePopup() {
+            const popup = document.getElementById('lead-popup');
+            popup.classList.remove('show');
+            setTimeout(() => popup.style.display = 'none', 400);
+        }
+
+        function submitPopupInquiry(e) {
+            e.preventDefault();
+            const btn = document.getElementById('pop-btn');
+            const status = document.getElementById('pop-status');
+            btn.innerText = "Submitting...";
+            
+            const data = {
+                name: document.getElementById('pop-name').value,
+                phone: document.getElementById('pop-phone').value,
+                class: 'Not Specified (From Auto-Popup)',
+                date: new Date().toLocaleString()
+            };
+
+            leadsRef.push(data).then(() => {
+                btn.innerText = "Claim Free Demo";
+                status.innerText = "Success! We will contact you shortly.";
+                status.style.color = "#16a34a";
+                setTimeout(() => closePopup(), 3000);
+            }).catch(err => {
+                btn.innerText = "Claim Free Demo";
+                status.innerText = "Failed. Try again.";
+                status.style.color = "#ef4444";
+            });
+        }
+
         // --- FIREBASE CONFIGURATION ---
         const firebaseConfig = {
             apiKey: "AIzaSyAGzZ_9z9-WjiGf2j7I805yQDInxdWVqdI",
@@ -570,7 +648,6 @@
                 document.getElementById('app-wrapper').style.display = 'none';
                 document.getElementById('admin-wrapper').style.display = 'block';
                 
-                // Using simple sessionStorage for easy access
                 if(sessionStorage.getItem('adminAuth') === 'true') {
                     document.getElementById('admin-login-sec').style.display = 'none';
                     document.getElementById('admin-dashboard').style.display = 'block';
@@ -720,8 +797,10 @@
             cont.innerHTML = '';
             let has = false;
             allImages.forEach(img => {
+                let altText = `CM English Academy ${img.category} - Best English Coaching in Barabazar, Nilmohanpur`;
+                
                 if(filter === 'All' || img.category === filter) {
-                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
+                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" alt="${altText}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
                     has = true;
                 }
             });
@@ -776,10 +855,38 @@
             });
         }
 
-        // Scroll Animations
+        // --- ANIMATED COUNTERS & SCROLL REVEAL ---
+        let countersStarted = false;
+        function runCounters() {
+            if(countersStarted) return;
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const increment = target / (duration / 16); 
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if(current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+            });
+            countersStarted = true;
+        }
+
         function reveal() {
             document.querySelectorAll(".reveal").forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add("active");
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight - 80) {
+                    el.classList.add("active");
+                    // Trigger counter if stats section comes into view
+                    if(el.id === "stats-section") runCounters();
+                }
             });
         }
         window.addEventListener("scroll", reveal);
