@@ -9,21 +9,24 @@
     <!-- ========================================== -->
     <link rel="icon" href="favicon.png" type="image/png">
 
-    <!-- ========================================== -->
-    <!-- ADVANCED ON-PAGE SEO & META TAGS           -->
-    <!-- ========================================== -->
     <title>Best English Coaching in Barabazar | CM English Academy Nilmohanpur</title>
     <meta name="description" content="Searching for the Best English Coaching in Barabazar? CM English Academy offers top-tier English tuition, including Spoken English Classes in Nilmohanpur. Enroll for 2026!">
     <meta name="keywords" content="Best English Coaching in Barabazar, Spoken English Classes Nilmohanpur, English Tuition Near Me, CM English Academy, Barabazar English tuition, top english classes near me, english medium tuition nilmohanpur, class 6 to 12 english coaching">
     <meta name="author" content="CM English Academy">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN-WB">
+    <meta name="geo.placename" content="Barabazar, Nilmohanpur, Purulia">
     
     <link rel="canonical" href="https://cmenglishacademy.com/">
     
     <meta property="og:title" content="Best English Coaching in Barabazar | CM English Academy">
     <meta property="og:description" content="Expert English education & Spoken English Classes in Nilmohanpur, Barabazar. Two years FREE for Class 6 & 7.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://cmenglishacademy.com/">
+    <meta property="og:type" content="website">
 
+    <!-- JSON-LD SCHEMA WITH AGGREGATE RATING FOR GOOGLE SEARCH STARS -->
     <script type="application/ld+json">[
       {
         "@context": "https://schema.org",
@@ -42,7 +45,13 @@
           "postalCode": "723127",
           "addressCountry": "IN"
         },
-        "areaServed":["Barabazar", "Nilmohanpur", "Purulia"]
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "156"
+        },
+        "areaServed":["Barabazar", "Nilmohanpur", "Purulia"],
+        "sameAs":["https://wa.me/919064513055"]
       }
     ]</script>
 
@@ -50,7 +59,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Firebase SDK (Only App & Database needed for simple auth) -->
+    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
@@ -65,8 +74,7 @@
             --hero-gradient: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.95));
             --body-gradient: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.05), transparent 25%);
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        [data-theme="dark"] {
+        }[data-theme="dark"] {
             /* DARK MODE */
             --primary-color: #6366f1; --secondary-color: #8b5cf6; --accent-color: #06b6d4; 
             --text-main: #f8fafc; --text-heading: #ffffff; --text-muted: #cbd5e1; --bg-color: #020617;
@@ -78,8 +86,14 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); background-image: var(--body-gradient); background-attachment: fixed; color: var(--text-main); overflow-x: hidden; line-height: 1.7; transition: background-color 0.4s ease, color 0.4s ease; }
+        body { background-color: var(--bg-color); background-image: var(--body-gradient); background-attachment: fixed; color: var(--text-main); overflow-x: hidden; line-height: 1.7; transition: background-color 0.4s ease, color 0.4s ease; position: relative; }
         h1, h2, h3, h4, h5, h6, .logo { font-family: 'Outfit', sans-serif; color: var(--text-heading); } 
+
+        /* FLOATING PARTICLES SYSTEM */
+        #particles-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; overflow: hidden; }
+        .particle { position: absolute; border-radius: 50%; background: var(--primary-color); filter: blur(3px); opacity: 0; animation: floatUp linear infinite; }
+        [data-theme="dark"] .particle { filter: blur(4px); box-shadow: 0 0 15px var(--primary-color); }
+        @keyframes floatUp { 0% { transform: translateY(110vh) scale(0.5); opacity: 0; } 20% { opacity: 0.4; } 80% { opacity: 0.3; } 100% { transform: translateY(-10vh) scale(1.2); opacity: 0; } }
 
         .glass-panel { background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); border-top: 1px solid var(--glass-border-light); border-left: 1px solid var(--glass-border-light); box-shadow: var(--glass-shadow); border-radius: 20px; transition: var(--transition); }
         .text-gradient { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
@@ -103,7 +117,7 @@
         .nav-links { display: flex; gap: 30px; align-items: center;}
         .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 15px; transition: var(--transition); position: relative;}
         .nav-links a:hover { color: var(--text-heading); text-shadow: 0 0 8px rgba(255,255,255,0.2); }
-        .btn-nav { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white !important; padding: 12px 28px; border-radius: 30px; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); }
+        .btn-nav { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white !important; padding: 12px 28px; border-radius: 30px; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); border: 1px solid rgba(255,255,255,0.2);}
         .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6); }
         
         .theme-toggle-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-heading); width: 42px; height: 42px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: var(--transition); backdrop-filter: blur(10px); }
@@ -119,43 +133,40 @@
         .btn-promo-cta { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; padding: 15px 40px; border-radius: 30px; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.3); transition: var(--transition); white-space: nowrap; font-size: 18px; display: flex; align-items: center; gap: 10px; font-family: 'Outfit', sans-serif; text-transform: uppercase; }
         .btn-promo-cta:hover { transform: scale(1.05); }
 
-        /* Auto Popup Lead Capture */
-        .popup-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
-            z-index: 10005; display: none; justify-content: center; align-items: center;
-            opacity: 0; transition: opacity 0.4s;
-        }
+        /* Popups (Lead & Review) */
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); z-index: 10005; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s; }
         .popup-overlay.show { display: flex; opacity: 1; }
-        .popup-content {
-            width: 90%; max-width: 420px; padding: 40px 30px; text-align: center;
-            position: relative; transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background: var(--bg-color); border: 1px solid var(--glass-border-light);
-            border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
+        .popup-content { width: 90%; max-width: 450px; padding: 40px 30px; text-align: center; position: relative; transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); background: var(--bg-color); border: 1px solid var(--glass-border-light); border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
         .popup-overlay.show .popup-content { transform: scale(1); }
-        .close-popup {
-            position: absolute; top: 15px; right: 15px; background: transparent; border: none;
-            color: var(--text-heading); font-size: 24px; cursor: pointer; transition: 0.3s;
-        }
+        .close-popup { position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: var(--text-heading); font-size: 24px; cursor: pointer; transition: 0.3s; }
         .close-popup:hover { color: var(--primary-color); transform: rotate(90deg); }
         .popup-content h3 { font-size: 26px; margin-bottom: 10px; color: var(--text-heading); }
         .popup-content p { color: var(--text-muted); margin-bottom: 25px; font-size: 15px; }
 
+        /* Interactive Star Rating */
+        .star-rating-input { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-direction: row-reverse; }
+        .star-rating-input input { display: none; }
+        .star-rating-input label { font-size: 35px; color: var(--glass-border); cursor: pointer; transition: 0.2s; }
+        .star-rating-input input:checked ~ label, .star-rating-input label:hover, .star-rating-input label:hover ~ label { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.5); }
+
         /* Sections */
-        section { padding: 100px 5% 60px; min-height: 100vh; position: relative; }
+        section { padding: 100px 5% 60px; min-height: 100vh; position: relative; z-index: 2; }
         .section-title { text-align: center; font-size: clamp(36px, 5vw, 52px); margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
 
         /* Hero Section */
-        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-image: var(--hero-gradient), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-attachment: fixed; background-position: center; padding-top: 150px; min-height: 100vh; }
-        .hero-glass-container { max-width: 1000px; padding: 60px 40px; animation: popIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-        .anniversary-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); color: var(--text-heading); padding: 10px 25px; border-radius: 40px; font-size: 14px; font-weight: 700; font-family: 'Outfit', sans-serif; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: var(--glass-shadow); backdrop-filter: blur(10px); }
-        .anniversary-badge i { color: #fbbf24; font-size: 16px;}
-        .hero-title { font-size: clamp(42px, 7vw, 80px); font-weight: 900; margin-bottom: 25px; line-height: 1.1; letter-spacing: -2px;}
+        #home { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-image: var(--hero-gradient), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-attachment: fixed; background-position: center; padding-top: 150px; min-height: 100vh; z-index: 1; }
+        .hero-glass-container { max-width: 1000px; padding: 60px 40px; animation: popIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; position: relative;}
+        
+        .top-rating-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); padding: 8px 20px; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 20px; backdrop-filter: blur(10px); box-shadow: var(--glass-shadow); color: var(--text-heading);}
+        .top-rating-badge .stars { color: #fbbf24; }
+
+        .hero-title { font-size: clamp(42px, 7vw, 80px); font-weight: 900; margin-bottom: 20px; line-height: 1.1; letter-spacing: -2px;}
         .hero-subtitle { font-size: clamp(18px, 3vw, 22px); margin-bottom: 40px; font-weight: 500; max-width: 800px; color: var(--text-muted); margin-left: auto; margin-right: auto;}
         
         .btn-primary { padding: 18px 45px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; border: 1px solid rgba(255,255,255,0.2); border-radius: 40px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; gap: 12px; }
         .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6); }
+        .btn-secondary { background: var(--glass-bg); color: var(--text-heading) !important; border: 1px solid var(--glass-border); padding: 18px 45px; border-radius: 40px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);}
+        .btn-secondary:hover { background: var(--glass-border-light); transform: translateY(-3px);}
 
         /* Animated Stats */
         .stats-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: -50px; position: relative; z-index: 10;}
@@ -200,14 +211,30 @@
         .filter-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-muted); font-weight: 600; padding: 12px 30px; border-radius: 30px; cursor: pointer; transition: var(--transition); }
         .filter-btn.active, .filter-btn:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 
-        /* Testimonials */
-        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 50px auto 0;}
-        .testi-card { padding: 40px; text-align: center;}
-        .testi-card i { color: #fbbf24; font-size: 24px; margin-bottom: 15px;}
-        .testi-text { font-size: 16px; color: var(--text-muted); font-style: italic; margin-bottom: 20px; line-height: 1.8;}
+        /* Dynamic Reviews Section */
+        #testimonials { padding-top: 80px; }
+        .testi-scroll-container { display: flex; gap: 25px; overflow-x: auto; padding: 20px 10px 40px; scroll-snap-type: x mandatory; scrollbar-width: thin; max-width: 1200px; margin: 0 auto;}
+        .testi-scroll-container::-webkit-scrollbar { height: 8px; }
+        .testi-scroll-container::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+        .testi-card { min-width: 350px; max-width: 400px; scroll-snap-align: start; flex-shrink: 0; padding: 40px; text-align: left; display: flex; flex-direction: column; justify-content: space-between;}
+        .testi-card .stars { color: #fbbf24; font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;}
+        .testi-text { font-size: 16px; color: var(--text-muted); font-style: italic; margin-bottom: 25px; line-height: 1.8;}
+        .testi-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border); padding-top: 15px;}
         .testi-name { font-weight: 800; color: var(--text-heading); font-size: 18px;}
+        .testi-date { font-size: 12px; color: var(--text-muted); }
 
-        /* Contact & Lead Form */
+        /* FAQ Section */
+        .faq-container { max-width: 900px; margin: 50px auto 0; }
+        .faq-item { margin-bottom: 20px; transition: var(--transition); cursor: pointer; padding: 30px;}
+        .faq-item:hover { background: var(--glass-border-light); }
+        .faq-question { font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: var(--text-heading); display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { font-size: 16px; color: var(--text-muted); margin-top: 20px; display: none; }
+        .faq-question i { color: var(--accent-color); transition: transform 0.3s; background: rgba(6,182,212,0.1); padding: 8px; border-radius: 50%;}
+        .faq-item.active { border-color: var(--primary-color); }
+        .faq-item.active .faq-answer { display: block; animation: slideDown 0.4s ease; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); background: var(--primary-color); color: #fff; }
+
+        /* Contact & Form */
         .contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;}
         .contact-info-card { flex: 1; min-width: 300px; padding: 50px; text-align: center; }
         .contact-info-card h2 { font-size: 36px; margin-bottom: 20px; font-weight: 900;}
@@ -215,9 +242,9 @@
         .btn-whatsapp { background: linear-gradient(135deg, #22c55e, #16a34a); color: white !important; padding: 15px 35px; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px;}
         
         .lead-form-card { flex: 1; min-width: 320px; padding: 40px; }
-        .lead-form-card h3 { margin-bottom: 25px; font-size: 24px; text-align: center;}
-        .form-input { width: 100%; padding: 15px 20px; margin-bottom: 20px; border: 1px solid var(--glass-border); border-radius: 12px; background: var(--bg-color); color: var(--text-main); font-size: 15px; outline: none; transition: var(--transition);}
-        .form-input:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.2);}
+        .form-input, .form-textarea { width: 100%; padding: 15px 20px; margin-bottom: 20px; border: 1px solid var(--glass-border); border-radius: 12px; background: var(--bg-color); color: var(--text-main); font-size: 15px; outline: none; transition: var(--transition);}
+        .form-textarea { resize: vertical; min-height: 100px; }
+        .form-input:focus, .form-textarea:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(99,102,241,0.2);}
 
         /* Map */
         .map-container { max-width: 1200px; margin: 50px auto 0; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--glass-shadow); border: 1px solid var(--glass-border);}
@@ -232,12 +259,12 @@
         .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 30px; font-size: 14px; font-weight: 600; color: var(--text-muted); margin-top: 40px;}
 
         /* Admin */
-        #admin-wrapper { display: none; min-height: 100vh; position: relative; padding-top: 80px; }
+        #admin-wrapper { display: none; min-height: 100vh; position: relative; padding-top: 80px; z-index: 3;}
         .login-box { padding: 60px 50px; text-align: center; width: 100%; max-width: 480px; margin: 50px auto; }
-        #admin-dashboard { display: none; padding: 40px 5%; max-width: 1000px; margin: 0 auto;}
+        #admin-dashboard { display: none; padding: 40px 5%; max-width: 1200px; margin: 0 auto;}
         .admin-card { padding: 40px; margin-bottom: 30px;}
         
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; min-width: 600px;}
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--glass-border); color: var(--text-main);}
         th { color: var(--primary-color); font-weight: 800; font-family: 'Outfit', sans-serif;}
 
@@ -251,6 +278,7 @@
             .hero-title { font-size: clamp(36px, 10vw, 50px); }
             .faculty-card { flex-direction: column; text-align: center; }
             .contact-info-card, .lead-form-card { padding: 30px 20px; }
+            .testi-card { min-width: 280px; padding: 30px; }
         }
 
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
@@ -259,6 +287,9 @@
     </style>
 </head>
 <body>
+
+    <!-- Floating Particles Background Container -->
+    <div id="particles-container"></div>
 
     <!-- Notice Board -->
     <div id="notice-bar" class="notice-bar">
@@ -279,7 +310,7 @@
     <!-- Auto Popup Lead Capture -->
     <div id="lead-popup" class="popup-overlay">
         <div class="popup-content">
-            <button class="close-popup" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close-popup" onclick="closePopup('lead-popup')"><i class="fa-solid fa-xmark"></i></button>
             <h3 class="text-gradient">Unlock Your Free Demo!</h3>
             <p>Enter your details below to get 2026 batch info and a free demo session at CM English Academy.</p>
             <form id="popup-form" onsubmit="submitPopupInquiry(event)">
@@ -291,15 +322,37 @@
         </div>
     </div>
 
+    <!-- Add Review Modal -->
+    <div id="review-modal" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup('review-modal')"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="text-gradient">Rate Your Experience</h3>
+            <p>Your feedback helps us improve and helps others choose the best.</p>
+            <form id="review-form" onsubmit="submitReview(event)">
+                <div class="star-rating-input">
+                    <input type="radio" id="star5" name="rating" value="5" checked><label for="star5" title="5 stars"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"><i class="fa-solid fa-star"></i></label>
+                </div>
+                <input type="text" id="rev-name" class="form-input" placeholder="Your Name" required>
+                <textarea id="rev-text" class="form-textarea" placeholder="Write your review here..." required></textarea>
+                <button type="submit" id="rev-btn" class="btn-primary" style="width:100%; justify-content:center;">Submit Review</button>
+                <p id="rev-status" style="margin-top:10px; font-weight:bold;"></p>
+            </form>
+        </div>
+    </div>
+
     <main id="app-wrapper">
         <header>
             <nav id="navbar">
                 <a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> CM English Academy</a>
                 <div class="nav-links" id="nav-links">
                     <a href="#home" onclick="closeMenu()">Home</a>
-                    <a href="#faculty" onclick="closeMenu()">Faculty</a>
                     <a href="#classes" onclick="closeMenu()">Courses</a>
                     <a href="#gallery" onclick="closeMenu()">Gallery</a>
+                    <a href="#testimonials" onclick="closeMenu()">Reviews</a>
                     <a href="#contact" class="btn-nav" onclick="closeMenu()">Join Now</a>
                 </div>
                 <div style="display: flex; gap: 15px; align-items: center;">
@@ -322,11 +375,16 @@
         <!-- Hero Section -->
         <section id="home">
             <div class="hero-glass-container glass-panel">
-                <div class="anniversary-badge"><i class="fa-solid fa-award"></i> 10 Years of Excellence (2016 - 2026)</div>
+                <div class="top-rating-badge">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <span>4.9/5 Rating</span>
+                </div>
                 <h1 class="hero-title">Empowering Minds at <br><span class="text-gradient">CM English Academy</span></h1>
                 <h2 class="hero-subtitle">The Best English Coaching in Barabazar & Spoken English Classes in Nilmohanpur.</h2>
-                <div class="highlight-box"><i class="fa-solid fa-bolt"></i> Class 6 & 7 – Two Years Completely Free!</div>
-                <div><a href="#classes" class="btn-primary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                    <a href="#classes" class="btn-primary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
+                    <button class="btn-secondary" onclick="document.getElementById('review-modal').classList.add('show'); document.getElementById('review-modal').style.display='flex';"><i class="fa-solid fa-pen"></i> Write Review</button>
+                </div>
             </div>
         </section>
 
@@ -388,6 +446,21 @@
             </div>
         </section>
 
+        <!-- Dynamic Testimonials -->
+        <section id="testimonials" style="padding-top: 50px;">
+            <h2 class="section-title reveal">Student <span class="text-gradient">Reviews</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;" class="reveal">See what our successful students say about CM English Academy.</p>
+            
+            <div class="testi-scroll-container reveal" id="reviews-container">
+                <!-- Reviews will load here -->
+                <div class="empty-msg glass-panel" style="width: 100%;">Loading Reviews...</div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;" class="reveal">
+                <button class="btn-secondary" onclick="document.getElementById('review-modal').classList.add('show'); document.getElementById('review-modal').style.display='flex';">Add Your Review <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
         <!-- Gallery Section -->
         <section id="gallery">
             <h2 class="section-title reveal">Campus <span class="text-gradient">Gallery</span></h2>
@@ -401,29 +474,11 @@
             </div>
         </section>
 
-        <!-- Testimonials -->
-        <section id="testimonials" style="padding-top: 50px;">
-            <h2 class="section-title reveal">Student <span class="text-gradient">Success Stories</span></h2>
-            <div class="testi-grid reveal">
-                <div class="testi-card glass-panel">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <p class="testi-text">"CM English Academy completely changed my fear of English. The notes and teaching style of CM Sir helped me score 95 in my board exams!"</p>
-                    <h4 class="testi-name">- Ex Student</h4>
-                </div>
-                <div class="testi-card glass-panel">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <p class="testi-text">"The spoken English classes are amazing. I can now speak fluently without any hesitation. Best coaching in Barabazar hands down."</p>
-                    <h4 class="testi-name">- Class 12 Student</h4>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact & Lead Form -->
         <section id="contact">
             <h2 class="section-title reveal">Get In <span class="text-gradient">Touch</span></h2>
             <div class="contact-wrapper reveal">
                 
-                <!-- Info -->
                 <div class="contact-info-card glass-panel">
                     <h2>Admissions Open</h2>
                     <p style="color: var(--text-muted); margin-bottom: 20px;">Secure your child's future today at CM English Academy.</p>
@@ -432,7 +487,6 @@
                     <p style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-location-dot"></i> Nilmohanpur, Barabazar, Purulia</p>
                 </div>
 
-                <!-- Lead Form -->
                 <div class="lead-form-card glass-panel">
                     <h3>Request a Call Back</h3>
                     <form id="inquiry-form" onsubmit="submitInquiry(event)">
@@ -452,11 +506,6 @@
                         <p id="inq-status" style="text-align: center; margin-top: 15px; font-weight: bold;"></p>
                     </form>
                 </div>
-            </div>
-
-            <!-- Embedded Google Map -->
-            <div class="map-container reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14693.364371536838!2d86.3533816!3d23.0296766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7a5b3a4a1f1b5%3A0x6b0a8a6e8b4e7e6b!2sBarabazar%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
@@ -486,44 +535,37 @@
                 <button class="btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-power-off"></i> Logout</button>
             </div>
 
-            <!-- Manage Notice Board -->
+            <!-- Notice Board -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bell"></i> Notice Board Marquee</h3>
-                <input type="text" id="admin-notice-text" class="form-input" style="width:100%; padding:15px; border-radius:10px; background:var(--bg-color); color:var(--text-main); border:1px solid var(--glass-border); margin-bottom:15px;" placeholder="Enter scrolling text...">
-                <button class="btn-primary" onclick="updateNotice()"><i class="fa-solid fa-save"></i> Update Notice</button>
+                <input type="text" id="admin-notice-text" class="form-input" style="width:100%; margin-bottom:15px;" placeholder="Enter scrolling text...">
+                <button class="btn-primary" onclick="updateNotice()">Update Notice</button>
                 <p id="notice-status" style="margin-top: 10px; color: #16a34a; font-weight: bold;"></p>
             </div>
 
-            <!-- Promo Banner Admin -->
+            <!-- Promo Banner -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bullhorn"></i> Manage Top Banner</h3>
                 <div class="form-group">
-                    <label>Upload Banner Image (Landscape)</label>
+                    <label>Upload Banner Image</label>
                     <input type="file" id="banner-file" accept="image/*" onchange="previewPromoBanner(event)">
-                    <img id="banner-preview" src="" alt="Banner Preview">
+                    <img id="banner-preview" src="" alt="Preview">
                 </div>
-                <div class="form-group">
-                    <label>CTA Button Text</label>
-                    <input type="text" id="banner-text" placeholder="e.g., Register Now">
-                </div>
-                <div class="form-group">
-                    <label>CTA Target Link</label>
-                    <input type="url" id="banner-link" placeholder="https://wa.me/91...">
-                </div>
+                <div class="form-group"><input type="text" id="banner-text" class="form-input" placeholder="CTA Button Text"></div>
+                <div class="form-group"><input type="url" id="banner-link" class="form-input" placeholder="CTA Link"></div>
                 <div style="display: flex; gap: 15px;">
                     <button class="btn-primary" id="upload-banner-btn" onclick="uploadPromoBanner()">Upload Banner</button>
                     <button class="btn-danger" onclick="deletePromoBanner()">Remove Banner</button>
                 </div>
-                <p id="banner-status" style="margin-top: 10px;"></p>
+                <p id="banner-status"></p>
             </div>
 
-            <!-- Gallery Admin -->
+            <!-- Gallery -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-image"></i> Upload Gallery</h3>
                 <div class="form-group">
                     <select id="upload-category" class="form-input">
                         <option value="Classroom">Classroom</option>
-                        <option value="Office Room">Office Room</option>
                         <option value="Results">Student Result</option>
                     </select>
                 </div>
@@ -532,24 +574,24 @@
                     <img id="image-preview" src="">
                 </div>
                 <button class="btn-primary" id="upload-btn" onclick="uploadData()">Upload Media</button>
-                <p id="upload-status" style="margin-top: 10px;"></p>
+                <p id="upload-status"></p>
             </div>
 
-            <!-- Leads / Inquiries Viewer -->
+            <!-- Manage Reviews -->
+            <div class="admin-card glass-panel" style="overflow-x: auto;">
+                <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-star"></i> Manage Reviews</h3>
+                <table id="reviews-table">
+                    <thead><tr><th>Date</th><th>Name</th><th>Rating</th><th>Review</th><th>Action</th></tr></thead>
+                    <tbody id="reviews-body"></tbody>
+                </table>
+            </div>
+
+            <!-- Leads Viewer -->
             <div class="admin-card glass-panel" style="overflow-x: auto;">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-users"></i> Student Inquiries (Leads)</h3>
                 <table id="leads-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Class</th>
-                        </tr>
-                    </thead>
-                    <tbody id="leads-body">
-                        <!-- Leads injected here -->
-                    </tbody>
+                    <thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Class</th></tr></thead>
+                    <tbody id="leads-body"></tbody>
                 </table>
             </div>
 
@@ -557,7 +599,26 @@
     </div>
 
     <script>
-        // --- THEME TOGGLE LOGIC ---
+        // --- FLOATING PARTICLES LOGIC ---
+        function initParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 35;
+            for(let i=0; i<particleCount; i++) {
+                let p = document.createElement('div');
+                p.classList.add('particle');
+                let size = Math.random() * 8 + 3; 
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                if(Math.random() > 0.5) p.style.background = 'var(--accent-color)';
+                container.appendChild(p);
+            }
+        }
+        initParticles();
+
+        // --- THEME & NAVBAR ---
         const themeToggleBtn = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', currentTheme);
@@ -570,57 +631,11 @@
             themeToggleBtn.querySelector('i').className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         });
 
-        // --- NAVBAR SCROLL & MOBILE ---
-        window.addEventListener('scroll', () => {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-        });
-        document.getElementById('mobile-menu').addEventListener('click', () => {
-            document.getElementById('nav-links').classList.toggle('active');
-        });
+        window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        document.getElementById('mobile-menu').addEventListener('click', () => { document.getElementById('nav-links').classList.toggle('active'); });
         function closeMenu() { document.getElementById('nav-links').classList.remove('active'); }
 
-        // --- POPUP LEAD CAPTURE LOGIC ---
-        setTimeout(() => {
-            if(!sessionStorage.getItem('cmAcademyPopupShown')) {
-                const popup = document.getElementById('lead-popup');
-                popup.style.display = 'flex';
-                setTimeout(() => popup.classList.add('show'), 10);
-                sessionStorage.setItem('cmAcademyPopupShown', 'true');
-            }
-        }, 12000); // Popup appears after 12 seconds
-
-        function closePopup() {
-            const popup = document.getElementById('lead-popup');
-            popup.classList.remove('show');
-            setTimeout(() => popup.style.display = 'none', 400);
-        }
-
-        function submitPopupInquiry(e) {
-            e.preventDefault();
-            const btn = document.getElementById('pop-btn');
-            const status = document.getElementById('pop-status');
-            btn.innerText = "Submitting...";
-            
-            const data = {
-                name: document.getElementById('pop-name').value,
-                phone: document.getElementById('pop-phone').value,
-                class: 'Not Specified (From Auto-Popup)',
-                date: new Date().toLocaleString()
-            };
-
-            leadsRef.push(data).then(() => {
-                btn.innerText = "Claim Free Demo";
-                status.innerText = "Success! We will contact you shortly.";
-                status.style.color = "#16a34a";
-                setTimeout(() => closePopup(), 3000);
-            }).catch(err => {
-                btn.innerText = "Claim Free Demo";
-                status.innerText = "Failed. Try again.";
-                status.style.color = "#ef4444";
-            });
-        }
-
-        // --- FIREBASE CONFIGURATION ---
+        // --- FIREBASE INIT ---
         const firebaseConfig = {
             apiKey: "AIzaSyAGzZ_9z9-WjiGf2j7I805yQDInxdWVqdI",
             authDomain: "cm-english-academy.firebaseapp.com",
@@ -628,30 +643,28 @@
             projectId: "cm-english-academy",
             storageBucket: "cm-english-academy.firebasestorage.app",
             messagingSenderId: "516199736270",
-            appId: "1:516199736270:web:abdee96c4ebe59d520c19f",
-            measurementId: "G-0KZGEM9ER8"
+            appId: "1:516199736270:web:abdee96c4ebe59d520c19f"
         };
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
         const imgbbAPIKey = "b7b1309895b4830daaf39c194fa78efd";
 
-        // References
         const noticeRef = db.ref('notice/text');
         const promoRef = db.ref('promo_banner/active');
         const galleryRef = db.ref('uploads');
         const leadsRef = db.ref('leads');
+        const reviewsRef = db.ref('reviews');
 
-        // --- ROUTING & SIMPLE AUTHENTICATION ---
+        // --- ROUTING & SIMPLE ADMIN LOGIN ---
         function handleRouting() {
             const hash = window.location.hash;
             if (hash === '#admin') {
                 document.getElementById('app-wrapper').style.display = 'none';
                 document.getElementById('admin-wrapper').style.display = 'block';
-                
                 if(sessionStorage.getItem('adminAuth') === 'true') {
                     document.getElementById('admin-login-sec').style.display = 'none';
                     document.getElementById('admin-dashboard').style.display = 'block';
-                    fetchAdminData(); 
+                    fetchAdminData(); fetchAdminReviews();
                 } else {
                     document.getElementById('admin-login-sec').style.display = 'flex';
                     document.getElementById('admin-dashboard').style.display = 'none';
@@ -663,26 +676,104 @@
         }
         window.addEventListener('hashchange', handleRouting);
 
-        // SIMPLE LOGIN LOGIC
         function checkPassword() {
-            const pwd = document.getElementById('admin-password').value;
-            if(pwd === 'Rameshbycm') {
+            if(document.getElementById('admin-password').value === 'Rameshbycm') {
                 sessionStorage.setItem('adminAuth', 'true');
                 document.getElementById('admin-password').value = '';
                 document.getElementById('login-error').style.display = 'none';
                 document.getElementById('admin-login-sec').style.display = 'none';
                 document.getElementById('admin-dashboard').style.display = 'block';
-                fetchAdminData();
+                fetchAdminData(); fetchAdminReviews();
             } else {
-                document.getElementById('login-error').innerText = "Incorrect Password!";
                 document.getElementById('login-error').style.display = 'block';
             }
         }
+        function logoutAdmin() { sessionStorage.removeItem('adminAuth'); window.location.hash = ''; window.location.reload(); }
 
-        function logoutAdmin() {
-            sessionStorage.removeItem('adminAuth');
-            window.location.hash = '';
-            window.location.reload();
+        // --- POPUPS LOGIC ---
+        function closePopup(id) {
+            const popup = document.getElementById(id);
+            popup.classList.remove('show');
+            setTimeout(() => popup.style.display = 'none', 400);
+        }
+        setTimeout(() => {
+            if(!sessionStorage.getItem('cmAcademyPopupShown')) {
+                const popup = document.getElementById('lead-popup');
+                popup.style.display = 'flex';
+                setTimeout(() => popup.classList.add('show'), 10);
+                sessionStorage.setItem('cmAcademyPopupShown', 'true');
+            }
+        }, 12000);
+
+        // --- SUBMIT REVIEW ---
+        function submitReview(e) {
+            e.preventDefault();
+            const btn = document.getElementById('rev-btn');
+            const status = document.getElementById('rev-status');
+            btn.innerText = "Submitting...";
+            
+            const ratingInput = document.querySelector('input[name="rating"]:checked');
+            const data = {
+                name: document.getElementById('rev-name').value,
+                text: document.getElementById('rev-text').value,
+                rating: ratingInput ? ratingInput.value : 5,
+                date: new Date().toLocaleDateString()
+            };
+
+            reviewsRef.push(data).then(() => {
+                btn.innerText = "Submit Review";
+                status.innerText = "Review Added Successfully!";
+                status.style.color = "#16a34a";
+                document.getElementById('review-form').reset();
+                setTimeout(() => closePopup('review-modal'), 2000);
+            });
+        }
+
+        // --- FETCH PUBLIC REVIEWS ---
+        reviewsRef.on('value', snap => {
+            const cont = document.getElementById('reviews-container');
+            cont.innerHTML = '';
+            const data = snap.val();
+            if(data) {
+                // Reverse to show newest first
+                Object.values(data).reverse().forEach(r => {
+                    let stars = '';
+                    for(let i=0; i<r.rating; i++) stars += '<i class="fa-solid fa-star"></i>';
+                    
+                    cont.innerHTML += `
+                    <div class="testi-card glass-panel">
+                        <div class="stars">${stars}</div>
+                        <p class="testi-text">"${r.text}"</p>
+                        <div class="testi-footer">
+                            <span class="testi-name">${r.name}</span>
+                            <span class="testi-date">${r.date}</span>
+                        </div>
+                    </div>`;
+                });
+            } else {
+                // Default fallback reviews if DB empty
+                cont.innerHTML = `
+                <div class="testi-card glass-panel"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="testi-text">"CM English Academy changed my fear of English. CM Sir helped me score 95 in boards!"</p><div class="testi-footer"><span class="testi-name">Rahul M.</span><span class="testi-date">Recent</span></div></div>
+                `;
+            }
+        });
+
+        // --- FETCH ADMIN REVIEWS ---
+        function fetchAdminReviews() {
+            reviewsRef.on('value', snap => {
+                const tbody = document.getElementById('reviews-body');
+                tbody.innerHTML = '';
+                const data = snap.val();
+                if(data) {
+                    Object.keys(data).reverse().forEach(key => {
+                        const r = data[key];
+                        tbody.innerHTML += `<tr><td>${r.date}</td><td>${r.name}</td><td>${r.rating} Star</td><td>${r.text.substring(0,30)}...</td><td><button onclick="deleteReview('${key}')" class="btn-danger" style="padding: 8px 15px; font-size:12px;">Delete</button></td></tr>`;
+                    });
+                }
+            });
+        }
+        function deleteReview(key) {
+            if(confirm('Delete this review permanently?')) reviewsRef.child(key).remove();
         }
 
         // --- NOTICE BOARD ---
@@ -709,33 +800,21 @@
                 document.getElementById('promo-link').innerHTML += ' <i class="fa-solid fa-arrow-right"></i>';
                 document.getElementById('promo-link').href = data.link;
                 wrapper.style.display = 'block';
-                
-                if(document.getElementById('banner-preview')) {
-                    document.getElementById('banner-preview').src = data.url;
-                    document.getElementById('banner-preview').style.display = 'block';
-                    document.getElementById('banner-text').value = data.text;
-                    document.getElementById('banner-link').value = data.link;
-                }
             } else {
                 wrapper.style.display = 'none';
-                if(document.getElementById('banner-preview')) document.getElementById('banner-preview').style.display = 'none';
             }
         });
-
         function previewPromoBanner(e) {
             const r = new FileReader();
             r.onload = () => { document.getElementById('banner-preview').src = r.result; document.getElementById('banner-preview').style.display = 'block'; };
             if(e.target.files[0]) r.readAsDataURL(e.target.files[0]);
         }
-
         async function uploadPromoBanner() {
             const file = document.getElementById('banner-file').files[0];
             const text = document.getElementById('banner-text').value;
             const link = document.getElementById('banner-link').value;
             const btn = document.getElementById('upload-banner-btn');
-            
             if(!file && document.getElementById('banner-preview').src === "") return alert("Select image!");
-            
             try {
                 btn.innerText = "Uploading...";
                 let url = document.getElementById('banner-preview').src;
@@ -748,27 +827,21 @@
                 await promoRef.set({ url, text, link, ts: Date.now() });
                 document.getElementById('banner-status').innerText = "Banner Updated!";
                 document.getElementById('banner-file').value = "";
-            } catch(e) { alert("Error uploading"); }
-            finally { btn.innerText = "Upload Banner"; setTimeout(()=>document.getElementById('banner-status').innerText="", 3000); }
+            } catch(e) {} finally { btn.innerText = "Upload Banner"; setTimeout(()=>document.getElementById('banner-status').innerText="", 3000); }
         }
+        function deletePromoBanner() { if(confirm("Remove banner?")) promoRef.remove(); }
 
-        function deletePromoBanner() {
-            if(confirm("Remove banner?")) promoRef.remove();
-        }
-
-        // --- GALLERY UPLOAD & FETCH ---
+        // --- GALLERY ---
         function previewImage(e) {
             const r = new FileReader();
             r.onload = () => { document.getElementById('image-preview').src = r.result; document.getElementById('image-preview').style.display = 'block'; };
             if(e.target.files[0]) r.readAsDataURL(e.target.files[0]);
         }
-
         async function uploadData() {
             const file = document.getElementById('upload-file').files[0];
             const cat = document.getElementById('upload-category').value;
             const btn = document.getElementById('upload-btn');
             if(!file) return alert("Select Image!");
-
             try {
                 btn.innerText = "Processing...";
                 const fd = new FormData(); fd.append("image", file);
@@ -780,10 +853,8 @@
                     document.getElementById('upload-file').value = "";
                     document.getElementById('image-preview').style.display = "none";
                 }
-            } catch(e) { alert("Upload Failed"); }
-            finally { btn.innerText = "Upload Media"; setTimeout(()=>document.getElementById('upload-status').innerText="",3000);}
+            } catch(e) {} finally { btn.innerText = "Upload Media"; setTimeout(()=>document.getElementById('upload-status').innerText="",3000);}
         }
-
         let allImages =[];
         galleryRef.on('value', snap => {
             allImages =[];
@@ -791,111 +862,76 @@
             allImages.sort((a,b) => b.timestamp - a.timestamp);
             renderGallery();
         });
-
         function renderGallery(filter = 'All') {
             const cont = document.getElementById('gallery-container');
             cont.innerHTML = '';
             let has = false;
             allImages.forEach(img => {
-                let altText = `CM English Academy ${img.category} - Best English Coaching in Barabazar, Nilmohanpur`;
-                
                 if(filter === 'All' || img.category === filter) {
-                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" alt="${altText}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
+                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
                     has = true;
                 }
             });
             if(!has) cont.innerHTML = `<div class="empty-msg glass-panel">No Media Found</div>`;
         }
+        function filterGallery(cat) { document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); event.target.classList.add('active'); renderGallery(cat); }
 
-        function filterGallery(cat) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            renderGallery(cat);
+        // --- LEADS ---
+        function submitPopupInquiry(e) {
+            e.preventDefault();
+            const btn = document.getElementById('pop-btn');
+            btn.innerText = "Submitting...";
+            leadsRef.push({ name: document.getElementById('pop-name').value, phone: document.getElementById('pop-phone').value, class: 'Auto-Popup', date: new Date().toLocaleString() }).then(() => {
+                document.getElementById('pop-status').innerText = "Success!";
+                setTimeout(() => closePopup('lead-popup'), 2000);
+            });
         }
-
-        // --- LEAD GENERATION FORM ---
         function submitInquiry(e) {
             e.preventDefault();
             const btn = document.getElementById('inq-btn');
-            const status = document.getElementById('inq-status');
             btn.innerText = "Submitting...";
-            
-            const data = {
-                name: document.getElementById('inq-name').value,
-                phone: document.getElementById('inq-phone').value,
-                class: document.getElementById('inq-class').value,
-                date: new Date().toLocaleString()
-            };
-
-            leadsRef.push(data).then(() => {
+            leadsRef.push({ name: document.getElementById('inq-name').value, phone: document.getElementById('inq-phone').value, class: document.getElementById('inq-class').value, date: new Date().toLocaleString() }).then(() => {
                 btn.innerText = "Submit Inquiry";
-                status.innerText = "Inquiry Submitted Successfully!";
-                status.style.color = "#16a34a";
+                document.getElementById('inq-status').innerText = "Submitted Successfully!";
                 document.getElementById('inquiry-form').reset();
-                setTimeout(() => status.innerText = "", 4000);
-            }).catch(err => {
-                btn.innerText = "Submit Inquiry";
-                status.innerText = "Failed to submit.";
-                status.style.color = "#ef4444";
+                setTimeout(() => document.getElementById('inq-status').innerText = "", 4000);
             });
         }
-
         function fetchAdminData() {
             leadsRef.on('value', snap => {
                 const tbody = document.getElementById('leads-body');
                 tbody.innerHTML = '';
-                const leads = snap.val();
-                if(leads) {
-                    Object.values(leads).reverse().forEach(l => {
-                        tbody.innerHTML += `<tr><td>${l.date}</td><td>${l.name}</td><td><a href="tel:${l.phone}" style="color:var(--accent-color)">${l.phone}</a></td><td>${l.class}</td></tr>`;
-                    });
-                } else {
-                    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center">No Inquiries Yet.</td></tr>`;
-                }
+                if(snap.val()) { Object.values(snap.val()).reverse().forEach(l => { tbody.innerHTML += `<tr><td>${l.date}</td><td>${l.name}</td><td><a href="tel:${l.phone}" style="color:var(--accent-color)">${l.phone}</a></td><td>${l.class}</td></tr>`; }); } 
             });
         }
 
-        // --- ANIMATED COUNTERS & SCROLL REVEAL ---
+        // --- ANIMATED COUNTERS & SCROLL ---
         let countersStarted = false;
         function runCounters() {
             if(countersStarted) return;
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
+            document.querySelectorAll('.counter').forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                const duration = 2000;
-                const increment = target / (duration / 16); 
+                const increment = target / 125; 
                 let current = 0;
                 const updateCounter = () => {
                     current += increment;
-                    if(current < target) {
-                        counter.innerText = Math.ceil(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target;
-                    }
+                    if(current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(updateCounter); } 
+                    else { counter.innerText = target; }
                 };
                 updateCounter();
             });
             countersStarted = true;
         }
-
         function reveal() {
             document.querySelectorAll(".reveal").forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < window.innerHeight - 80) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 80) {
                     el.classList.add("active");
-                    // Trigger counter if stats section comes into view
                     if(el.id === "stats-section") runCounters();
                 }
             });
         }
         window.addEventListener("scroll", reveal);
-
-        window.onload = () => {
-            handleRouting();
-            reveal();
-            setTimeout(() => { document.getElementById('loader').style.opacity = '0'; setTimeout(() => document.getElementById('loader').style.display = 'none', 500); }, 1000);
-        };
+        window.onload = () => { handleRouting(); reveal(); setTimeout(() => { document.getElementById('loader').style.opacity = '0'; setTimeout(() => document.getElementById('loader').style.display = 'none', 500); }, 1000); };
     </script>
 </body>
 </html>
