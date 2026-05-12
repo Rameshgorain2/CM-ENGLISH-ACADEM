@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
+    <!-- ========================================== -->
+    <!-- FAVICON -->
+    <!-- ========================================== -->
     <link rel="icon" href="favicon.png" type="image/png">
 
     <title>Best English Coaching in Barabazar | CM English Academy Nilmohanpur</title>
@@ -56,22 +59,8 @@
 
     <style>
         /* Anti-Copy & Anti-Select */
-        body {
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-        }
-        /* Allow selection inside inputs/textareas only */
-        input, textarea {
-            -webkit-user-select: text;
-            -khtml-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-        }
+        body { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; }
+        input, textarea { -webkit-user-select: text; -khtml-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }
 
         :root {
             /* LIGHT MODE */
@@ -101,6 +90,7 @@
 
         .fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: var(--bg-color); background-image: var(--body-gradient); z-index: -3; transition: background-color 0.4s ease; }
 
+        /* Particles */
         #particles-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; pointer-events: none; overflow: hidden; }
         .particle { position: absolute; border-radius: 50%; background: var(--primary-color); opacity: 0; animation: floatUp linear infinite; will-change: transform, opacity; transform: translateZ(0); }
         @keyframes floatUp { 0% { transform: translate3d(0, 110vh, 0) scale(0.5); opacity: 0; } 20% { opacity: 0.25; } 80% { opacity: 0.15; } 100% { transform: translate3d(0, -10vh, 0) scale(1.2); opacity: 0; } }
@@ -130,6 +120,7 @@
         .theme-toggle-btn { background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-heading); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: var(--transition); backdrop-filter: blur(10px); }
         .menu-toggle { display: none; font-size: 24px; color: var(--text-heading); cursor: pointer; }
 
+        /* Promo Banner */
         #promo-banner-wrapper { display: none; padding: 120px 5% 0px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 10; }
         .promo-banner { position: relative; width: 100%; border-radius: 15px; overflow: hidden; box-shadow: var(--glass-shadow); display: flex; align-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); min-height: 120px; transform: translateZ(0);}
         .promo-banner img { width: 100%; max-height: 350px; object-fit: cover; display: block; }
@@ -138,6 +129,25 @@
         .btn-promo-cta { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff !important; padding: 12px 30px; border-radius: 30px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); transition: var(--transition); white-space: nowrap; font-size: 16px; display: flex; align-items: center; gap: 8px; font-family: 'Outfit', sans-serif; text-transform: uppercase; }
         .btn-promo-cta:hover { transform: scale(1.05); }
 
+        /* FAST LOADING STUDENT RESULTS SLIDER */
+        .results-marquee-section { padding-top: 40px; padding-bottom: 20px; position: relative; z-index: 5; overflow: hidden; }
+        .results-marquee-section h3 { text-align: center; font-size: 24px; color: var(--text-heading); margin-bottom: 25px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;}
+        .marquee-container { width: 100%; overflow: hidden; position: relative; white-space: nowrap; padding: 10px 0; }
+        .marquee-container::before, .marquee-container::after { content: ''; position: absolute; top: 0; width: 100px; height: 100%; z-index: 2; pointer-events: none; }
+        .marquee-container::before { left: 0; background: linear-gradient(to right, var(--bg-color), transparent); }
+        .marquee-container::after { right: 0; background: linear-gradient(to left, var(--bg-color), transparent); }
+        
+        .marquee-track { display: flex; width: max-content; animation: marquee-scroll 25s linear infinite; will-change: transform; transform: translate3d(0,0,0); }
+        .marquee-track:hover { animation-play-state: paused; }
+        .marquee-track img { height: 200px; width: auto; border-radius: 12px; margin: 0 15px; border: 3px solid var(--glass-border-light); box-shadow: var(--glass-shadow); object-fit: cover; transition: transform 0.3s ease; cursor: pointer; }
+        .marquee-track img:hover { transform: scale(1.05); }
+
+        @keyframes marquee-scroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* Popups */
         .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); z-index: 10005; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s; transform: translateZ(0);}
         .popup-overlay.show { display: flex; opacity: 1; }
         .popup-content { width: 90%; max-width: 400px; padding: 35px 25px; text-align: center; position: relative; transform: scale(0.9); transition: transform 0.3s; background: var(--bg-color); border: 1px solid var(--glass-border-light); border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
@@ -230,9 +240,16 @@
         .map-container iframe { width: 100%; height: 100%; border: none;}
 
         .float-wa { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 20px rgba(22, 163, 74, 0.4); z-index: 999; transition: var(--transition); text-decoration: none;}
-        .float-wa:hover { transform: scale(1.1); }
+        .float-wa:hover { transform: scale(1.1); color: white; }
 
-        footer { padding: 60px 5% 30px; text-align: center; border-top: 1px solid var(--glass-border); background: var(--footer-bg); backdrop-filter: blur(10px); transform: translateZ(0);}
+        /* Developer Card styling */
+        .dev-card { max-width: 500px; margin: 0 auto 40px; display: flex; align-items: center; gap: 20px; padding: 25px; border-radius: 20px; text-align: left;}
+        .dev-img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--primary-color); overflow: hidden; flex-shrink: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+        .dev-img img { width: 100%; height: 100%; object-fit: cover; }
+        .dev-info h4 { color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 5px; }
+        .dev-info h3 { font-size: 22px; color: var(--text-heading); font-weight: 800; margin-bottom: 12px; }
+
+        footer { padding: 40px 5% 30px; text-align: center; border-top: 1px solid var(--glass-border); background: var(--footer-bg); backdrop-filter: blur(10px); transform: translateZ(0);}
         .footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 20px; font-size: 13px; color: var(--text-muted); margin-top: 30px;}
 
         #admin-wrapper { display: none; min-height: 100vh; position: relative; padding-top: 80px; z-index: 3;}
@@ -257,6 +274,10 @@
             section { padding: 70px 5% 40px; }
             .stat-box { padding: 20px; min-width: 150px; }
             .stat-box h3, .stat-box span.suffix { font-size: 30px; }
+            .marquee-track img { height: 140px; margin: 0 10px; border-width: 2px;}
+            .marquee-container::before, .marquee-container::after { width: 40px; }
+            .dev-card { flex-direction: column; text-align: center; padding: 20px; }
+            .dev-info { text-align: center; }
         }
 
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
@@ -266,49 +287,35 @@
 </head>
 <body>
 
-    <!-- SECURITY: SCRIPT TO DISABLE INSPECT ELEMENT -->
     <script>
-        // Disable Right Click
         document.addEventListener('contextmenu', event => event.preventDefault());
-
-        // Disable Keyboard Shortcuts (F12, Ctrl+Shift+I, Ctrl+U)
         document.onkeydown = function(e) {
-            if(e.keyCode == 123) return false; // F12
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Ctrl+Shift+I
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Ctrl+Shift+C
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Ctrl+Shift+J
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Ctrl+U
+            if(e.keyCode == 123) return false; 
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; 
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; 
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; 
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; 
         }
-        
-        // Anti-Debugger Loop
-        setInterval(function() {
-            debugger;
-        }, 100);
+        setInterval(function() { debugger; }, 100);
     </script>
 
-    <!-- FIXED BACKGROUND (Performance Fix) -->
     <div class="fixed-bg"></div>
-
-    <!-- OPTIMIZED FLOATING PARTICLES -->
     <div id="particles-container"></div>
 
-    <!-- Notice Board -->
     <div id="notice-bar" class="notice-bar">
         <i class="fa-solid fa-bell"></i> 
         <marquee id="notice-text" scrollamount="5">Welcome to CM English Academy. Best English Coaching in Barabazar. Admissions Open for 2026!</marquee>
     </div>
 
-    <!-- Float WA -->
     <a href="https://wa.me/919064513055" class="float-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
-    <!-- Loader -->
     <div id="loader">
         <div class="spinner"></div>
         <h2 style="margin-top: 25px; font-weight: 900;">CM ENGLISH</h2>
         <p style="color: var(--accent-color); font-weight: 700; margin-top: 5px; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Academy</p>
     </div>
 
-    <!-- Auto Popup Lead Capture -->
+    <!-- Lead Popup -->
     <div id="lead-popup" class="popup-overlay">
         <div class="popup-content">
             <button class="close-popup" onclick="closePopup('lead-popup')"><i class="fa-solid fa-xmark"></i></button>
@@ -323,7 +330,7 @@
         </div>
     </div>
 
-    <!-- Add Review Modal -->
+    <!-- Review Modal -->
     <div id="review-modal" class="popup-overlay">
         <div class="popup-content">
             <button class="close-popup" onclick="closePopup('review-modal')"><i class="fa-solid fa-xmark"></i></button>
@@ -389,7 +396,7 @@
             </div>
         </section>
 
-        <!-- Stats (Animated Counters) -->
+        <!-- Stats -->
         <div class="stats-container reveal" id="stats-section">
             <div class="stat-box glass-panel">
                 <h3 class="counter" data-target="10">0</h3><span class="suffix">+</span>
@@ -405,8 +412,18 @@
             </div>
         </div>
 
+        <!-- Auto-Sliding Student Results -->
+        <section id="top-results-slider" class="results-marquee-section" style="display: none;">
+            <h3 class="reveal"><i class="fa-solid fa-trophy" style="color: #fbbf24; margin-right: 8px;"></i> Our Proud Achievers</h3>
+            <div class="marquee-container reveal">
+                <div class="marquee-track" id="results-slider-track">
+                    <!-- Javascript will dynamically inject Result images here -->
+                </div>
+            </div>
+        </section>
+
         <!-- Faculty Section -->
-        <section id="faculty" style="padding-top: 80px;">
+        <section id="faculty" style="padding-top: 40px;">
             <h2 class="section-title reveal">Meet Our <span class="text-gradient">Director</span></h2>
             <div class="faculty-card glass-panel reveal">
                 <div class="faculty-img">
@@ -453,7 +470,6 @@
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 25px;" class="reveal">See what our successful students say about CM English Academy.</p>
             
             <div class="testi-scroll-container reveal" id="reviews-container">
-                <!-- Reviews will load here -->
                 <div class="empty-msg glass-panel" style="width: 100%;">Loading Reviews...</div>
             </div>
             
@@ -479,7 +495,6 @@
         <section id="contact">
             <h2 class="section-title reveal">Get In <span class="text-gradient">Touch</span></h2>
             <div class="contact-wrapper reveal">
-                
                 <div class="contact-info-card glass-panel">
                     <h2>Admissions Open</h2>
                     <p style="color: var(--text-muted); margin-bottom: 15px;">Secure your child's future today at CM English Academy.</p>
@@ -487,7 +502,6 @@
                     <a href="https://wa.me/919064513055" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
                     <p style="color: var(--text-muted); font-size: 13px;"><i class="fa-solid fa-location-dot"></i> Nilmohanpur, Barabazar, Purulia</p>
                 </div>
-
                 <div class="lead-form-card glass-panel">
                     <h3 style="margin-bottom: 15px; font-size: 22px;">Request a Call Back</h3>
                     <form id="inquiry-form" onsubmit="submitInquiry(event)">
@@ -515,8 +529,22 @@
             </div>
         </section>
 
+        <!-- NEW: MEET THE DEVELOPER SECTION -->
+        <section id="developer" style="padding: 20px 5%; min-height: auto;">
+            <div class="dev-card glass-panel reveal">
+                <div class="dev-img">
+                    <img src="https://i.ibb.co/KcymDN2p/image-1776582090708.jpg" alt="Ramesh Gorain - Developer" loading="lazy">
+                </div>
+                <div class="dev-info">
+                    <h4>Meet The Developer</h4>
+                    <h3>Ramesh Gorain</h3>
+                    <a href="https://ramesh-portfolio-tau.vercel.app/" target="_blank" class="btn-primary" style="padding: 10px 25px; font-size: 14px; border-radius: 30px;">Get Detail <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i></a>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <div class="footer-bottom">
+            <div class="footer-bottom" style="margin-top: 10px;">
                 <p>&copy; 2026 CM English Academy Nilmohanpur. All Rights Reserved.</p>
                 <p style="margin-top: 10px;"><a href="#admin" style="color: var(--text-muted); text-decoration: none; font-size: 12px;">Admin Access <i class="fa-solid fa-lock"></i></a></p>
             </div>
@@ -541,7 +569,6 @@
                 <button class="btn-danger" onclick="logoutAdmin()"><i class="fa-solid fa-power-off"></i> Logout</button>
             </div>
 
-            <!-- Notice Board -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bell"></i> Notice Board Marquee</h3>
                 <input type="text" id="admin-notice-text" class="form-input" style="width:100%; margin-bottom:15px;" placeholder="Enter scrolling text...">
@@ -549,14 +576,9 @@
                 <p id="notice-status" style="margin-top: 10px; color: #16a34a; font-weight: bold;"></p>
             </div>
 
-            <!-- Promo Banner Admin -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-bullhorn"></i> Manage Top Banner</h3>
-                <div class="form-group">
-                    <label>Upload Banner Image</label>
-                    <input type="file" id="banner-file" accept="image/*" onchange="previewPromoBanner(event)">
-                    <img id="banner-preview" src="" alt="Preview">
-                </div>
+                <div class="form-group"><input type="file" id="banner-file" accept="image/*" onchange="previewPromoBanner(event)"><img id="banner-preview" src="" alt="Preview"></div>
                 <div class="form-group"><input type="text" id="banner-text" class="form-input" placeholder="CTA Button Text"></div>
                 <div class="form-group"><input type="url" id="banner-link" class="form-input" placeholder="CTA Link"></div>
                 <div style="display: flex; gap: 15px;">
@@ -566,7 +588,6 @@
                 <p id="banner-status"></p>
             </div>
 
-            <!-- Gallery Admin -->
             <div class="admin-card glass-panel">
                 <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-image"></i> Upload Gallery</h3>
                 <div class="form-group">
@@ -584,7 +605,6 @@
                 <p id="upload-status"></p>
             </div>
 
-            <!-- Manage Reviews -->
             <div class="admin-card glass-panel" style="overflow-x: auto;">
                 <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-star"></i> Manage Reviews</h3>
                 <table id="reviews-table">
@@ -593,7 +613,6 @@
                 </table>
             </div>
 
-            <!-- Leads Viewer -->
             <div class="admin-card glass-panel" style="overflow-x: auto;">
                 <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-users"></i> Student Inquiries (Leads)</h3>
                 <table id="leads-table">
@@ -601,15 +620,14 @@
                     <tbody id="leads-body"></tbody>
                 </table>
             </div>
-
         </div>
     </div>
 
     <script>
-        // --- PERFORMANCE OPTIMIZED PARTICLES ---
+        // --- FLOATING PARTICLES LOGIC ---
         function initParticles() {
             const container = document.getElementById('particles-container');
-            const particleCount = 15; // Reduced for performance
+            const particleCount = 15; 
             for(let i=0; i<particleCount; i++) {
                 let p = document.createElement('div');
                 p.classList.add('particle');
@@ -662,7 +680,7 @@
         const leadsRef = db.ref('leads');
         const reviewsRef = db.ref('reviews');
 
-        // --- ROUTING & SIMPLE ADMIN LOGIN WITH ENCRYPTION ---
+        // --- ROUTING & ADMIN LOGIN ---
         function handleRouting() {
             const hash = window.location.hash;
             if (hash === '#admin') {
@@ -685,7 +703,6 @@
 
         function checkPassword() {
             const pwd = document.getElementById('admin-password').value;
-            // Double Base64 obfuscation for 'Rameshbycm' is 'VW1GdFpYTm9ZbmxqYlE9PQ=='
             if(btoa(btoa(pwd)) === 'VW1GdFpYTm9ZbmxqYlE9PQ==') {
                 sessionStorage.setItem('adminAuth', 'true');
                 document.getElementById('admin-password').value = '';
@@ -830,7 +847,7 @@
                 await promoRef.set({ url, text, link, ts: Date.now() });
                 document.getElementById('banner-status').innerText = "Updated!";
                 document.getElementById('banner-file').value = "";
-            } catch(e) {} finally { btn.innerText = "Upload Banner"; setTimeout(()=>document.getElementById('banner-status').innerText="", 2000); }
+            } catch(e) {} finally { btn.innerText = "Upload Banner"; setTimeout(()=>document.getElementById('banner-status').innerText="", 3000); }
         }
         function deletePromoBanner() { if(confirm("Remove?")) promoRef.remove(); }
 
@@ -858,26 +875,52 @@
                 }
             } catch(e) {} finally { btn.innerText = "Upload Media"; setTimeout(()=>document.getElementById('upload-status').innerText="",2000);}
         }
+        
         let allImages =[];
         galleryRef.on('value', snap => {
             allImages =[];
-            if(snap.val()) Object.keys(snap.val()).forEach(k => allImages.push(snap.val()[k]));
+            if(snap.val()) {
+                Object.keys(snap.val()).forEach(k => allImages.push(snap.val()[k]));
+            }
             allImages.sort((a,b) => b.timestamp - a.timestamp);
             renderGallery();
+            renderResultsSlider(); 
         });
+
         function renderGallery(filter = 'All') {
             const cont = document.getElementById('gallery-container');
             cont.innerHTML = '';
             let has = false;
             allImages.forEach(img => {
+                let altText = `CM English Academy ${img.category} - Best English Coaching in Barabazar`;
                 if(filter === 'All' || img.category === filter) {
-                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
+                    cont.innerHTML += `<div class="gallery-item"><img src="${img.url}" alt="${altText}" loading="lazy"><div class="gallery-overlay"><h4>${img.category}</h4></div></div>`;
                     has = true;
                 }
             });
             if(!has) cont.innerHTML = `<div class="empty-msg glass-panel">No Media Found</div>`;
         }
         function filterGallery(cat) { document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); event.target.classList.add('active'); renderGallery(cat); }
+
+        function renderResultsSlider() {
+            const track = document.getElementById('results-slider-track');
+            const section = document.getElementById('top-results-slider');
+            const results = allImages.filter(img => img.category === 'Results');
+            
+            if(results.length === 0) {
+                section.style.display = 'none';
+                return;
+            }
+            
+            section.style.display = 'block';
+            let itemsHtml = '';
+            results.forEach(img => {
+                itemsHtml += `<img src="${img.url}" alt="Student Result" loading="lazy">`;
+            });
+            
+            let fullSet = itemsHtml + itemsHtml + itemsHtml + itemsHtml; 
+            track.innerHTML = fullSet + fullSet;
+        }
 
         // --- LEADS ---
         function submitPopupInquiry(e) {
@@ -937,4 +980,4 @@
         window.onload = () => { handleRouting(); reveal(); setTimeout(() => { document.getElementById('loader').style.opacity = '0'; setTimeout(() => document.getElementById('loader').style.display = 'none', 300); }, 800); };
     </script>
 </body>
-</html>[]
+</html>
